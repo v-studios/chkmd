@@ -6,6 +6,7 @@ import (
 	"reflect"
 	"runtime"
 	"testing"
+	"time"
 )
 
 func TestReadConfig(t *testing.T) {
@@ -21,6 +22,28 @@ func TestReadConfig(t *testing.T) {
 	for _, tv := range testValues {
 		got := mimeTypes[tv.key]
 		equals(t, got, tv.want)
+	}
+}
+
+func TestExifDateTime(t *testing.T) {
+	testValues := []struct {
+		key  string
+		want time.Time
+	}{
+		{"2015:01:09 01:32:16.90", time.Date(2015, time.January, 9, 01, 32, 16, 900000000, time.UTC)},
+		{" 2015:01:09 01:32:16.90\n ", time.Date(2015, time.January, 9, 01, 32, 16, 900000000, time.UTC)},
+		{" 2015:01:09 01:32:16\n ", time.Date(2015, time.January, 9, 01, 32, 16, 0, time.UTC)},
+		{" 2015:01:09 01:32:16", time.Date(2015, time.January, 9, 01, 32, 16, 0, time.UTC)},
+	}
+	for _, tv := range testValues {
+		e := exif{
+			Data: map[string]string{
+				"Date/Time Original": tv.key,
+			},
+		}
+		got, err := e.DateTime()
+		equals(t, got, tv.want)
+		equals(t, nil, err)
 	}
 }
 
