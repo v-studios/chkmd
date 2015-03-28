@@ -1,0 +1,38 @@
+---
+mime_types:
+  - audio/amr
+  - audio/amr-wb
+  - audio/flac
+  - audio/midi
+  - audio/mp4a-latm
+  - audio/mpa-robust
+  - audio/mpeg
+  - audio/ogg
+  - audio/x-aiff
+  - audio/x-gsm
+  - audio/x-ms-wma
+  - audio/x-ms-wax"             
+  - audio/x-pn-realaudio
+  - audio/x-realaudio
+  - audio/x-wav
+  - image/gif
+  - image/jpeg
+  - image/png
+  - image/svg+xml
+  - image/tiff"   
+  - image/x-photoshop
+  - image/webp
+  - video/mpeg
+  - video/mp4
+  - video/quicktime
+  - video/ogg
+  - video/webm
+  - video/x-flv
+  - video/x-ms-asf
+  - video/x-ms-wm
+  - video/x-ms-wmv
+  - video/x-ms-wmx
+  - video/x-ms-wvx
+  - video/x-msvideo
+
+
