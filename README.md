@@ -6,7 +6,10 @@ Reports on quality of embedded metadata for media assets to be imported.
 Requirements
 ------------
 
-Requires go to be installed.
+Requires [go](https://golang.org/doc/install) to be installed.
+Also expects [exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool/) to be installed.
+
+I used exiftool because it also works with video and audio files.
 
 Installation
 ------------
