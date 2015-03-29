@@ -41,10 +41,67 @@ func TestExifDateTime(t *testing.T) {
 				"Date/Time Original": tv.key,
 			},
 		}
-		got, err := e.DateTime()
+		got, err := e.DateCreated()
 		equals(t, got, tv.want)
 		equals(t, nil, err)
 	}
+}
+
+func TestExifHasDateCreated(t *testing.T) {
+	testValues := []struct {
+		key  string
+		want bool
+	}{
+		{"2015:01:09 01:32:16.90", true},
+		{"", false},
+	}
+	for _, tv := range testValues {
+		e := exif{
+			Data: map[string]string{
+				"Date/Time Original": tv.key,
+			},
+		}
+		equals(t, e.HasDateCreated(), tv.want)
+	}
+}
+
+func TestExifHasKeywords(t *testing.T) {
+	values := []struct {
+		key  string
+		want bool
+	}{
+		{"Some, Key, Words, With space", true},
+		{"", false},
+	}
+	for _, v := range values {
+		e := newExif()
+		e.Data["Keywords"] = v.key
+		equals(t, e.HasKeywords(), v.want)
+	}
+}
+
+func TestExifHasDescription(t *testing.T) {
+	values := []struct {
+		key  string
+		want bool
+	}{
+		{"This is a descripton.", true},
+		{"", false},
+		{"汉字/漢字", true},
+	}
+	for _, v := range values {
+		e := newExif()
+		e.Data["Description"] = v.key
+		equals(t, e.HasDescription(), v.want)
+	}
+}
+
+func TestGetExifData(t *testing.T) {
+	e, err := getExifData("image.jpg")
+	equals(t, err, nil)
+	equals(t, e.HasDateCreated(), true)
+	equals(t, e.HasDescription(), true)
+	equals(t, e.HasKeywords(), true)
 }
 
 func TestFileWalk(t *testing.T) {
