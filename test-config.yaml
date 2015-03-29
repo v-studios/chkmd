@@ -11,7 +11,7 @@ mime_types:
   - audio/x-aiff
   - audio/x-gsm
   - audio/x-ms-wma
-  - audio/x-ms-wax"             
+  - audio/x-ms-wax 
   - audio/x-pn-realaudio
   - audio/x-realaudio
   - audio/x-wav
@@ -19,7 +19,7 @@ mime_types:
   - image/jpeg
   - image/png
   - image/svg+xml
-  - image/tiff"   
+  - image/tiff
   - image/x-photoshop
   - image/webp
   - video/mpeg
@@ -34,5 +34,3 @@ mime_types:
   - video/x-ms-wmx
   - video/x-ms-wvx
   - video/x-msvideo
-
-
