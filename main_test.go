@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"path/filepath"
 	"reflect"
 	"runtime"
@@ -104,8 +105,43 @@ func TestGetExifData(t *testing.T) {
 	equals(t, e.HasKeywords(), true)
 }
 
-func TestFileWalk(t *testing.T) {
+func TestGetExifDataNoFile(t *testing.T) {
+	e, err := getExifData("noimage.jpg")
+	equals(t, e, newExif())
+	equals(t, err.Error(), "exit status 1")
+}
 
+func TestMakeWalker(t *testing.T) {
+	values := []struct {
+		key string
+	}{
+		{"image.jpg"},
+		{"../"},
+		{"main_test.go"},
+	}
+	for _, v := range values {
+		ch := make(chan string, 10)
+		readConfig("test-config.yaml")
+		stats := &statistics{}
+		f := makeWalker(ch, stats, mimeTypes)
+		fi, statErr := os.Stat(v.key)
+		err := f(v.key, fi, statErr)
+		equals(t, err, nil)
+		timeout := make(chan bool, 1)
+		go func() {
+			time.Sleep(100 * time.Millisecond)
+			timeout <- true
+		}()
+
+		select {
+		case p := <-ch:
+			equals(t, p, v.key)
+			close(ch)
+		case <-timeout:
+			close(timeout)
+			close(ch)
+		}
+	}
 }
 
 // equals fails the test if got is not equal to want.
