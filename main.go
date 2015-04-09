@@ -27,7 +27,7 @@ const (
 )
 
 var (
-	cfgfile = flag.String("c", "dev-config.yaml", "The config file to read from.")
+	cfgfile = flag.String("c", "", "The config file to read from.")
 	dir     = flag.String("d", "", "The directory to process, recursively.")
 	procs   = flag.Int("p", runtime.NumCPU(), "The number of processes to run.")
 
@@ -139,16 +139,24 @@ func getExifData(p string) (exif, error) {
 
 // readConfig, uh, reads the config, and makes the values available.
 func readConfig(p string) {
-	b, err := ioutil.ReadFile(p)
-	if err != nil {
-		log.Fatalf("Couldn't open config file: %s. Error: %s", p, err)
+	var mtypes []string
+	switch {
+	case p != "":
+		b, err := ioutil.ReadFile(p)
+		if err != nil {
+			log.Fatalf("Couldn't open config file: %s. Error: %s", p, err)
+		}
+		conf := config{}
+		err = yaml.Unmarshal(b, &conf)
+		if err != nil {
+			log.Fatalf("Error parsing file %s: %s", p, err)
+		}
+		mtypes = conf.MimeTypes
+
+	case p == "":
+		mtypes = defaultTypes
 	}
-	conf := config{}
-	err = yaml.Unmarshal(b, &conf)
-	if err != nil {
-		log.Fatalf("Error parsing file %s: %s", p, err)
-	}
-	for _, t := range conf.MimeTypes {
+	for _, t := range mtypes {
 		mimeTypes[t] = true
 	}
 }

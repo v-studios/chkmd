@@ -26,6 +26,24 @@ func TestReadConfig(t *testing.T) {
 	}
 }
 
+func TestReadDefaultConfig(t *testing.T) {
+	testValues := []struct {
+		key  string
+		want bool
+	}{
+		{"audio/mpeg", true},
+		{"image/png", true},
+		{"video/mp4", true},
+		{"image/webp", false},
+	}
+	mimeTypes = map[string]bool{} // reset map
+	readConfig("")
+	for _, tv := range testValues {
+		got := mimeTypes[tv.key]
+		equals(t, got, tv.want)
+	}
+}
+
 func TestExifDateTime(t *testing.T) {
 	testValues := []struct {
 		key  string

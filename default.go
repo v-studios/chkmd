@@ -1,0 +1,28 @@
+package main
+
+var defaultTypes = []string{
+	// "audio/flac",
+	// "audio/mp4a-latm",
+	// "audio/mpa-robust",
+	"audio/mpeg",
+	// "audio/ogg",
+	// "audio/x-aiff",
+	// "audio/x-ms-wma",
+	// "audio/x-wav",
+	"image/gif",
+	"image/jpeg",
+	"image/png",
+	"image/tiff",
+	// "image/webp",
+	"video/mpeg",
+	"video/mp4",
+	"video/quicktime",
+	// "video/ogg",
+	// "video/webm",
+	// "video/x-ms-asf",
+	// "video/x-ms-wm",
+	// "video/x-ms-wmv",
+	// "video/x-ms-wmx",
+	// "video/x-ms-wvx",
+	// "video/x-msvideo",
+}
