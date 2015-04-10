@@ -102,16 +102,18 @@ func TestExifHasKeywords(t *testing.T) {
 
 func TestExifHasDescription(t *testing.T) {
 	values := []struct {
-		key  string
-		want bool
+		key   string
+		value string
+		want  bool
 	}{
-		{"This is a descripton.", true},
-		{"", false},
-		{"汉字/漢字", true},
+		{"Caption-Abstract", "This is a descripton.", true},
+		{"Description", "Another fun description", true},
+		{"A non description key", "Great non descripiton", false},
+		{"Caption-Abstract", "汉字/漢字", true},
 	}
 	for _, v := range values {
 		e := newExif()
-		e.Data["Description"] = v.key
+		e.Data[v.key] = v.value
 		equals(t, e.HasDescription(), v.want)
 	}
 }
@@ -131,6 +133,104 @@ func TestExifHasNasaId(t *testing.T) {
 		e := newExif()
 		e.Data[v.key] = v.value
 		equals(t, e.HasNasaId(), v.want)
+	}
+}
+
+func TestExifHasLocation(t *testing.T) {
+	values := []struct {
+		city, region, country string
+		wantString            string
+		want                  bool
+	}{
+		{"Montreal", "Quebec", "Canada", "Montreal, Quebec, Canada", true},
+		{"Portland", "Oregon", "", "Portland, Oregon", true},
+		{"", "California", "US", "California, US", true},
+		{"", "", "", "", false},
+		{"NYC", "", "", "NYC", true},
+	}
+	for _, v := range values {
+		e := newExif()
+		e.Data["City"] = v.city
+		e.Data["Province-State"] = v.region
+		e.Data["Country-Primary Location Name"] = v.country
+		equals(t, e.Location(), v.wantString)
+		equals(t, e.HasLocation(), v.want)
+	}
+}
+
+func TestHasTitle(t *testing.T) {
+	values := []struct {
+		key   string
+		value string
+		want  bool
+	}{
+		{"Object Name", "atitle", true},
+		{"Headline", "btitle", true},
+		{"Title", "ctitle", true},
+		{"Random", "untitled", false},
+	}
+	for _, v := range values {
+		e := newExif()
+		e.Data[v.key] = v.value
+		equals(t, e.HasTitle(), v.want)
+	}
+}
+
+func TestMediaType(t *testing.T) {
+	values := []struct {
+		value, wantString string
+		want              bool
+	}{
+		{"image/tiff", "image", true},
+		{"video/mpeg", "video", true},
+		{"audio/mpeg", "audio", true},
+		{"application/json", "", false},
+	}
+	readConfig("")
+	for _, v := range values {
+		e := newExif()
+		e.Data["MIME Type"] = v.value
+		equals(t, e.MediaType(), v.wantString)
+		equals(t, e.HasMediaType(), v.want)
+	}
+}
+
+func TestFileFormat(t *testing.T) {
+	values := []struct {
+		mType, fType, wantString string
+		want                     bool
+	}{
+		{"image/tiff", "TIFF", "TIFF", true},
+		{"image/png", "PNG", "PNG", true},
+		{"image/jpeg", "JPG", "JPG", true},
+		{"text/plain", "TXT", "", false},
+		{"video/mpeg", "MP4", "MP4", true},
+		{"audio/mpeg", "MP3", "MP3", true},
+		{"not/real", "faker", "", false},
+	}
+	readConfig("")
+	for _, v := range values {
+		e := newExif()
+		e.Data["MIME Type"] = v.mType
+		e.Data["File Type"] = v.fType
+		equals(t, e.FileFormat(), v.wantString)
+		equals(t, e.HasFileFormat(), v.want)
+	}
+}
+
+func TestPhotographer(t *testing.T) {
+	values := []struct {
+		k, v, wantString string
+		want             bool
+	}{
+		{"By-line", "That photog", "That photog", true},
+		{"Other", "Hahahahah", "", false},
+	}
+	for _, v := range values {
+		e := newExif()
+		e.Data[v.k] = v.v
+		equals(t, e.Photographer(), v.wantString)
+		equals(t, e.HasPhotographer(), v.want)
 	}
 }
 
@@ -198,9 +298,15 @@ func TestProcessFiles(t *testing.T) {
 		wg.Add(1)
 		ch <- v.key
 		close(ch)
+		// TODO: work out capturing the log message and test it.
+		// var buf bytes.Buffer
+		// log.SetOutput(&buf)
 		processFiles(ch, stats, wg)
+		// log.SetOutput(os.Stderr)
 		equals(t, stats.Accept, v.accept)
 		equals(t, stats.Reject, v.reject)
+		// fmt.Println("XXX", buf.String())
+		// equals(t, strings.Contains(buf.String(), "Error processing test-config.yaml: exit status 1"), true)
 	}
 }
 

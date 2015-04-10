@@ -61,6 +61,7 @@ func newExif() exif {
 // DateCreated returns a time object representing the creation time.
 func (e exif) DateCreated() (time.Time, error) {
 	d := e.Data["Date/Time Original"]
+	// TODO: Do we need to try IPTC first?
 	return parseDate(d)
 }
 
@@ -73,7 +74,7 @@ func (e exif) HasDateCreated() bool {
 	return true
 }
 
-// Keywords returns the keywords value.
+// Keywords returns the IPTC keywords value.
 func (e exif) Keywords() string {
 	return e.Data["Keywords"]
 }
@@ -83,9 +84,14 @@ func (e exif) HasKeywords() bool {
 	return e.Keywords() != ""
 }
 
-// Description returns the Description.
+// Description returns the Description. Description has been mapped to IPTC Caption-Abstract tag, and also Description in XMP. So we try them in that order.
 func (e exif) Description() string {
-	return e.Data["Description"]
+	var d string
+	d = e.Data["Caption-Abstract"]
+	if d == "" {
+		d = e.Data["Description"]
+	}
+	return d
 }
 
 // Has Description returns true if Description is non-empty.
@@ -93,7 +99,8 @@ func (e exif) HasDescription() bool {
 	return e.Description() != ""
 }
 
-func (e exif) nasaId() string {
+// NasaId tries to return some value for NASA ID. THis is supposed to be the file name, but is also reportedly in ojb Identifier or Original Transmission reference. So we try those and fall back to the File name.
+func (e exif) NasaId() string {
 	var id string
 	id = e.Data["Job Identifier"]
 	if id == "" {
@@ -105,8 +112,99 @@ func (e exif) nasaId() string {
 	return id
 }
 
+// HasNasaId returns if exif.NasaId() returns a non empty string.
 func (e exif) HasNasaId() bool {
-	return e.nasaId() != ""
+	return e.NasaId() != ""
+}
+
+// Title tries to return a valid title for the asset. This has been mapped to Object Name or Headline in IPTC, but can also be Title in XMP. So we try them in that order.
+func (e exif) Title() string {
+	var t string
+	t = e.Data["Object Name"]
+	if t == "" {
+		t = e.Data["Headline"]
+	}
+	if t == "" {
+		t = e.Data["Title"]
+	}
+	return t
+}
+
+// HasTitle returns  if exif.Title() returns a non empty string.
+func (e exif) HasTitle() bool {
+	return e.Title() != ""
+}
+
+// Location has been mapped to city and state. this would be mapped to a few IPTC tags: City, Province-State, and Country-Primary Location Name. There are also fields we might be able to use in XMP. It appears that what I see now in XMP are Creator City, Creator ..., But I am not sure that means the subject matter would share the info. So we are only doing IPTC here at this point.
+func (e exif) Location() string {
+	var city, region, country string
+	var addr []string
+	city = e.Data["City"]
+	if city != "" {
+		addr = append(addr, city)
+	}
+	region = e.Data["Province-State"]
+	if region != "" {
+		addr = append(addr, region)
+	}
+	country = e.Data["Country-Primary Location Name"]
+	if country != "" {
+		addr = append(addr, country)
+	}
+	return strings.Join(addr, ", ")
+}
+
+// HasLocation returns if exif.Location() reurns a non-empty string.
+func (e exif) HasLocation() bool {
+	return e.Location() != ""
+}
+
+// MediaType returns the Media Type by parsing the file's MIME type. It splits
+// the MIME type and provides the first part if it is a valid mimeType.
+func (e exif) MediaType() string {
+	if mimeTypes[e.Data["MIME Type"]] {
+		t := strings.Split(e.Data["MIME Type"], "/")[0]
+		if t == "audio" || t == "image" || t == "video" {
+			return t
+		}
+	}
+	return ""
+}
+
+// HasMediaType returns if exif.MediaType() returns a non-empty value.
+func (e exif) HasMediaType() bool {
+	return e.MediaType() != ""
+}
+
+// FileFormat returns the exiftool file format if the MIME type is in mimeTypes.
+func (e exif) FileFormat() string {
+	if mimeTypes[e.Data["MIME Type"]] {
+		return e.Data["File Type"]
+	}
+	return ""
+}
+
+// HasFileFormat returns if exif.FileType() returns a non-empty value.
+func (e exif) HasFileFormat() bool {
+	return e.FileFormat() != ""
+}
+
+// Photographer returns the IPTC By-line. It that fails it falls back to XMP Creator, then Exif Artist.
+func (e exif) Photographer() string {
+	var p string
+	p = e.Data["By-line"]
+	if p == "" {
+		p = e.Data["Creator"]
+	}
+	if p == "" {
+		p = e.Data["Artist"]
+	}
+	return p
+}
+
+// HasPhotographer returns if exif.Photographer returns a non-empty value.
+func (e exif) HasPhotographer() bool {
+	return e.Photographer() != ""
 }
 
 // parseDate, uh, parses the date from the string.
