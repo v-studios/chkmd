@@ -115,6 +115,24 @@ func TestExifHasDescription(t *testing.T) {
 	}
 }
 
+func TestExifHasNasaId(t *testing.T) {
+	values := []struct {
+		key   string
+		value string
+		want  bool
+	}{
+		{"Job Identifier", "anid", true},
+		{"Original Transmission Reference", "anotherid", true},
+		{"File Name", "thisid", true},
+		{"Tragedy Key", "badid", false},
+	}
+	for _, v := range values {
+		e := newExif()
+		e.Data[v.key] = v.value
+		equals(t, e.HasNasaId(), v.want)
+	}
+}
+
 func TestGetExifData(t *testing.T) {
 	e, err := getExifData("image.jpg")
 	equals(t, err, nil)

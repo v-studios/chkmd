@@ -93,6 +93,22 @@ func (e exif) HasDescription() bool {
 	return e.Description() != ""
 }
 
+func (e exif) nasaId() string {
+	var id string
+	id = e.Data["Job Identifier"]
+	if id == "" {
+		id = e.Data["Original Transmission Reference"]
+	}
+	if id == "" {
+		id = e.Data["File Name"]
+	}
+	return id
+}
+
+func (e exif) HasNasaId() bool {
+	return e.nasaId() != ""
+}
+
 // parseDate, uh, parses the date from the string.
 func parseDate(d string) (time.Time, error) {
 	var (
