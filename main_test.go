@@ -6,6 +6,7 @@ import (
 	"path/filepath"
 	"reflect"
 	"runtime"
+	"sync"
 	"testing"
 	"time"
 )
@@ -177,6 +178,29 @@ func TestMakeWalker(t *testing.T) {
 			close(timeout)
 			close(ch)
 		}
+	}
+}
+
+func TestProcessFiles(t *testing.T) {
+	values := []struct {
+		key    string
+		reject int32
+		accept int32
+	}{
+		{"image.jpg", 0, 1},
+		{"nomd.jpg", 1, 0},
+		{"test-config.yaml", 1, 0},
+	}
+	for _, v := range values {
+		ch := make(chan string, 2)
+		stats := &statistics{}
+		wg := &sync.WaitGroup{}
+		wg.Add(1)
+		ch <- v.key
+		close(ch)
+		processFiles(ch, stats, wg)
+		equals(t, stats.Accept, v.accept)
+		equals(t, stats.Reject, v.reject)
 	}
 }
 
