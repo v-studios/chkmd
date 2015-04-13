@@ -3,8 +3,8 @@ package main
 
 import (
 	"bytes"
+	"encoding/csv"
 	"flag"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"mime"
@@ -24,15 +24,37 @@ import (
 const (
 	exifDate     = "2006:01:02 15:04:05"
 	exifNanoDate = "2006:01:02 15:04:05.00"
+	na           = "N/A"
 )
 
 var (
 	cfgfile = flag.String("c", "", "The config file to read from.")
 	dir     = flag.String("d", "", "The directory to process, recursively.")
+	output  = flag.String("o", "", "A file to output to.")
 	procs   = flag.Int("p", runtime.NumCPU(), "The number of processes to run.")
+	verbose = flag.Bool("v", false, "Be noisy while processing. Really, just print errors.")
 
 	mimeTypes = make(map[string]bool)
-	wg        sync.WaitGroup
+	ingroup   sync.WaitGroup
+	outgroup  sync.WaitGroup
+	csvHeader = []string{
+		"Path",
+		"Status",
+		"Reason",
+		"NASA ID",
+		"Title",
+		"508 Description",
+		"Description",
+		"Date Created",
+		"Location",
+		"Keywords",
+		"Media Type",
+		"File Format",
+		"Center",
+		"Secondary Creator Credit",
+		"Photographer",
+		"Album",
+	}
 )
 
 // statistics tracks our statistics.
@@ -207,6 +229,47 @@ func (e exif) HasPhotographer() bool {
 	return e.Photographer() != ""
 }
 
+func (e exif) MakeErrorRow(c chan []string, p string, err error) {
+	erow := []string{p, "Rejected", err.Error()}
+	for _ = range csvHeader[3:] {
+		erow = append(erow, "")
+	}
+	c <- erow
+}
+
+func (e exif) MakeRow(c chan []string, p, status, reason string) {
+	var dc string
+	if e.HasDateCreated() {
+		dto, err := e.DateCreated()
+		if err != nil {
+			e.MakeErrorRow(c, p, err)
+			if *verbose {
+				log.Printf("Error getting DateCreated for %s: %s", p, err.Error())
+			}
+			return
+		}
+		dc = dto.Format(time.RFC3339)
+	}
+	row := []string{p,
+		status,
+		reason,
+		e.NasaId(),
+		e.Title(),
+		na,
+		e.Description(),
+		dc,
+		e.Location(),
+		e.Keywords(),
+		e.MediaType(),
+		e.FileFormat(),
+		na,
+		na,
+		e.Photographer(),
+		na,
+	}
+	c <- row
+}
+
 // parseDate, uh, parses the date from the string.
 func parseDate(d string) (time.Time, error) {
 	var (
@@ -291,19 +354,39 @@ func makeWalker(files chan string, stats *statistics, types map[string]bool) fun
 	}
 }
 
-func processFiles(files chan string, stats *statistics, wg *sync.WaitGroup) {
+func processFiles(files chan string, results chan []string, stats *statistics, wg *sync.WaitGroup) {
 	defer wg.Done()
+	var status, reason string
 	for p := range files {
 		e, err := getExifData(p)
 		if err != nil {
-			log.Printf("Error processing %s: %s", p, err)
+			e.MakeErrorRow(results, p, err)
+			if *verbose {
+				log.Printf("Error processing %s: %s\n", p, err)
+			}
+			return
 		}
 		if e.HasDateCreated() && (e.HasKeywords() || e.HasDescription()) {
 			atomic.AddInt32(&stats.Accept, 1)
+			status = "Accepted"
+			reason = ""
 		} else {
 			atomic.AddInt32(&stats.Reject, 1)
+			status = "Rejected"
+			reason = "Minimum metadata not provided"
+		}
+		e.MakeRow(results, p, status, reason)
+	}
+}
+
+func makeOutput(c chan []string, out *csv.Writer, wg *sync.WaitGroup) {
+	for result := range c {
+		err := out.Write(result)
+		if err != nil {
+			log.Printf("Error writing row for %s: %s\n", result[0], err.Error())
 		}
 	}
+	wg.Done()
 }
 
 func main() {
@@ -317,17 +400,48 @@ func main() {
 	files := make(chan string, 64)
 	stats := &statistics{}
 
+	_, err := os.Stat(*dir)
+	if err != nil {
+		log.Fatalf("Error opening %s: %s\n", *dir, err)
+	}
 	go func() {
-		filepath.Walk(*dir, makeWalker(files, stats, mimeTypes))
+		err := filepath.Walk(*dir, makeWalker(files, stats, mimeTypes))
+		if err != nil {
+			log.Fatalf("Error opening %s: %s\n", *dir, err)
+		}
 		close(files)
 	}()
 
+	results := make(chan []string, 64)
+
 	for i := 0; i < *procs; i++ {
-		wg.Add(1)
-		go processFiles(files, stats, &wg)
+		ingroup.Add(1)
+		go processFiles(files, results, stats, &ingroup)
 	}
 
-	wg.Wait()
-	fmt.Printf("%#v\n", stats)
-	fmt.Println("Do stats...")
+	var out *csv.Writer
+	var f os.File
+	if *output != "" {
+		f, err := os.Create(*output)
+		if err != nil {
+			log.Fatalln("Error opening output file: ", err)
+		}
+		out = csv.NewWriter(f)
+	} else {
+		out = csv.NewWriter(os.Stdout)
+	}
+	out.Write(csvHeader)
+	out.Flush()
+
+	go func() {
+		outgroup.Add(1)
+		makeOutput(results, out, &outgroup)
+	}()
+
+	ingroup.Wait()
+	close(results)
+	outgroup.Wait()
+	out.Flush()
+	f.Close()
+	log.Printf("%#v\n", stats)
 }
