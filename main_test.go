@@ -293,15 +293,17 @@ func TestProcessFiles(t *testing.T) {
 	}
 	for _, v := range values {
 		ch := make(chan string, 2)
+		rchan := make(chan []string, 1)
 		stats := &statistics{}
 		wg := &sync.WaitGroup{}
 		wg.Add(1)
 		ch <- v.key
-		close(ch)
 		// TODO: work out capturing the log message and test it.
 		// var buf bytes.Buffer
 		// log.SetOutput(&buf)
-		processFiles(ch, stats, wg)
+		close(ch)
+		processFiles(ch, rchan, stats, wg)
+		close(rchan)
 		// log.SetOutput(os.Stderr)
 		equals(t, stats.Accept, v.accept)
 		equals(t, stats.Reject, v.reject)

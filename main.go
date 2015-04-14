@@ -360,6 +360,7 @@ func processFiles(files chan string, results chan []string, stats *statistics, w
 	for p := range files {
 		e, err := getExifData(p)
 		if err != nil {
+			atomic.AddInt32(&stats.Reject, 1)
 			e.MakeErrorRow(results, p, err)
 			if *verbose {
 				log.Printf("Error processing %s: %s\n", p, err)
