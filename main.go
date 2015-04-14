@@ -359,24 +359,25 @@ func processFiles(files chan string, results chan []string, stats *statistics, w
 	var status, reason string
 	for p := range files {
 		e, err := getExifData(p)
-		if err != nil {
+		switch {
+		case err != nil:
 			atomic.AddInt32(&stats.Reject, 1)
 			e.MakeErrorRow(results, p, err)
 			if *verbose {
 				log.Printf("Error processing %s: %s\n", p, err)
 			}
-			return
+		default:
+			if e.HasDateCreated() && (e.HasKeywords() || e.HasDescription()) {
+				atomic.AddInt32(&stats.Accept, 1)
+				status = "Accepted"
+				reason = ""
+			} else {
+				atomic.AddInt32(&stats.Reject, 1)
+				status = "Incomplete"
+				reason = "Minimum metadata not provided"
+			}
+			e.MakeRow(results, p, status, reason)
 		}
-		if e.HasDateCreated() && (e.HasKeywords() || e.HasDescription()) {
-			atomic.AddInt32(&stats.Accept, 1)
-			status = "Accepted"
-			reason = ""
-		} else {
-			atomic.AddInt32(&stats.Reject, 1)
-			status = "Rejected"
-			reason = "Minimum metadata not provided"
-		}
-		e.MakeRow(results, p, status, reason)
 	}
 }
 
