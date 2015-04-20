@@ -22,6 +22,8 @@ import (
 )
 
 const (
+	exifDateOnly = "2006:01:02"
+	exifDateZone = "2006:01:02 15:04Z"
 	exifDate     = "2006:01:02 15:04:05"
 	exifNanoDate = "2006:01:02 15:04:05.00"
 	na           = "N/A"
@@ -82,7 +84,11 @@ func newExif() exif {
 
 // DateCreated returns a time object representing the creation time.
 func (e exif) DateCreated() (time.Time, error) {
-	d := e.Data["Date/Time Original"]
+	var d string
+	d = e.Data["Date/Time Original"]
+	if d == "" {
+		d = e.Data["Date Created"]
+	}
 	// TODO: Do we need to try IPTC first?
 	return parseDate(d)
 }
@@ -285,7 +291,10 @@ func parseDate(d string) (time.Time, error) {
 	}
 	t, err = time.Parse(format, d)
 	if err != nil {
-		return t, err
+		t, err = time.Parse(exifDateOnly, d)
+	}
+	if err != nil {
+		t, err = time.Parse(exifDateZone, d)
 	}
 	return t, err
 
