@@ -18,13 +18,15 @@ import (
 	"sync/atomic"
 	"time"
 
-	"gopkg.in/yaml.v1"
+	yaml "gopkg.in/yaml.v1"
 )
 
 const (
-	exifDate     = "2006:01:02 15:04:05"
-	exifNanoDate = "2006:01:02 15:04:05.00"
-	na           = "N/A"
+	exifDate         = "2006:01:02 15:04:05"
+	exifNanoDate     = "2006:01:02 15:04:05.00"
+	exifDateZone     = "2006:01:02 15:04:05-07:00"
+	exifNanoDateZone = "2006:01:02 15:04:05.00-07:00"
+	na               = "N/A"
 )
 
 var (
@@ -276,12 +278,22 @@ func parseDate(d string) (time.Time, error) {
 		t      time.Time
 		err    error
 		format string
+		// p      bool
 	)
 	d = strings.TrimSpace(d)
+	// exiftool converts all dates to exif like format even if they are ISO
+	// 8601. So this will all need redone if and when we get our own metadata.
 	if strings.Contains(d, ".") {
 		format = exifNanoDate
+		if strings.Contains(d, "-") {
+			format = exifNanoDateZone
+			// p = true
+		}
 	} else {
 		format = exifDate
+		if strings.Contains(d, "-") {
+			format = exifDateZone
+		}
 	}
 	t, err = time.Parse(format, d)
 	if err != nil {
