@@ -128,8 +128,8 @@ func (e exif) HasDescription() bool {
 	return e.Description() != ""
 }
 
-// NasaId tries to return some value for NASA ID. THis is supposed to be the file name, but is also reportedly in ojb Identifier or Original Transmission reference. So we try those and fall back to the File name.
-func (e exif) NasaId() string {
+// NasaID tries to return some value for NASA ID. THis is supposed to be the file name, but is also reportedly in ojb Identifier or Original Transmission reference. So we try those and fall back to the File name.
+func (e exif) NasaID() string {
 	var id string
 	id = e.Data["Job Identifier"]
 	if id == "" {
@@ -141,9 +141,9 @@ func (e exif) NasaId() string {
 	return id
 }
 
-// HasNasaId returns if exif.NasaId() returns a non empty string.
-func (e exif) HasNasaId() bool {
-	return e.NasaId() != ""
+// HasNasaID returns if exif.NasaId() returns a non empty string.
+func (e exif) HasNasaID() bool {
+	return e.NasaID() != ""
 }
 
 // Title tries to return a valid title for the asset. This has been mapped to Object Name or Headline in IPTC, but can also be Title in XMP. So we try them in that order.
@@ -260,7 +260,7 @@ func (e exif) MakeRow(c chan []string, p, status, reason string) {
 	row := []string{p,
 		status,
 		reason,
-		e.NasaId(),
+		e.NasaID(),
 		e.Title(),
 		na,
 		e.Description(),
@@ -452,7 +452,10 @@ func main() {
 	} else {
 		out = csv.NewWriter(os.Stdout)
 	}
-	out.Write(csvHeader)
+	err = out.Write(csvHeader)
+	if err != nil {
+		log.Printf("Error writing csvHeader: %s", err)
+	}
 	out.Flush()
 
 	outgroup.Add(1)
@@ -464,6 +467,12 @@ func main() {
 	close(results)
 	outgroup.Wait()
 	out.Flush()
-	f.Close()
+
+	if *output != "" {
+		err = f.Close()
+		if err != nil {
+			log.Printf("Error closing file %s: %s", f.Name(), err)
+		}
+	}
 	log.Printf("%#v\n", stats)
 }

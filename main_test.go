@@ -126,7 +126,7 @@ func TestExifHasDescription(t *testing.T) {
 	}
 }
 
-func TestExifHasNasaId(t *testing.T) {
+func TestExifHasNasaID(t *testing.T) {
 	values := []struct {
 		key   string
 		value string
@@ -140,7 +140,7 @@ func TestExifHasNasaId(t *testing.T) {
 	for _, v := range values {
 		e := newExif()
 		e.Data[v.key] = v.value
-		equals(t, e.HasNasaId(), v.want)
+		equals(t, e.HasNasaID(), v.want)
 	}
 }
 
@@ -381,8 +381,17 @@ func TestMain(t *testing.T) {
 	alternative := "Path,Status,Reason,NASA ID,Title,508 Description,Description,Date Created,Location,Keywords,Media Type,File Format,Center,Secondary Creator Credit,Photographer,Album\nimage.jpg,Accepted,,image.jpg,,N/A,\"Row of power lines receding into mountain range at sunset during rain storm..Kingston, Arizona\",2003-09-01T18:28:44Z,,\"Kingman, Arizona, AZ, balance, color, colour, communicate, communication, communication industry, communications, desert, deserts, electric, electric lines, electrical, electrical energy, electricity, energy, evening, foothill, foothills, horizontal, industries, industry, journey, landscape, landscapes, lighting, line, lines, location, locations, mountain, mountains, network, networked, networking, networks, outdoor, outdoors, outside, physics, power, power line, power lines, power-line, power-lines, powerline, powerlines, progress, progressing, progression, rain, rain shower, rainfall, raining, rainy, row, row of, rows, rural, rural outdoors, series, speed, stack, stacked up, stacks, stretching, sunset, sunsets, sunsets over land, team work, team-work, teamwork, technological, technologies, technology, telephone lines, telephone systems, United States Of America, weather\",image,JPEG,N/A,N/A,Mark Harmel,N/A\nnomd.jpg,Incomplete,Minimum metadata not provided,nomd.jpg,,N/A,,,,,image,JPEG,N/A,N/A,,N/A\n"
 
 	old := os.Stdout // keep backup of the real stdout
-	r, w, _ := os.Pipe()
+	olderr := os.Stderr
+	r, w, err := os.Pipe()
+	if err != nil {
+		t.Fatalf("Error opening pipe: %s", err)
+	}
+	re, we, err := os.Pipe()
+	if err != nil {
+		t.Fatalf("Error opening pipe: %s", err)
+	}
 	os.Stdout = w
+	os.Stderr = we
 
 	*dir = "."
 	main()
@@ -390,14 +399,29 @@ func TestMain(t *testing.T) {
 	outC := make(chan string)
 	// copy the output in a separate goroutine so printing can't block indefinitely
 	go func() {
-		var buf bytes.Buffer
-		io.Copy(&buf, r)
+		var buf, bufe bytes.Buffer
+		_, err := io.Copy(&buf, r)
+		if err != nil {
+			t.Fatalf("Error copying stdout to buffer: %s", err)
+		}
 		outC <- buf.String()
+		_, err = io.Copy(&bufe, re)
+		if err != nil {
+			t.Fatalf("Error copying stderr to buffer: %s", err)
+		}
 	}()
 
 	// back to normal state
-	w.Close()
+	err = w.Close()
+	if err != nil {
+		t.Fatalf("Error closing writer: %s", err)
+	}
+	err = we.Close()
+	if err != nil {
+		t.Fatalf("Error closing writer: %s", err)
+	}
 	os.Stdout = old // restoring the real stdout
+	os.Stderr = olderr
 	out := <-outC
 
 	equals(t, out == want || out == alternative, true)
