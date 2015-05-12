@@ -58,6 +58,7 @@ fi
 # TODO: choose how to manage dependencies
 # run go tests
 echo -e "\nrunning go test -race..."
+go test -race .
 check_exit
 
 echo -e "\n"

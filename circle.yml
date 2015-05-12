@@ -1,0 +1,12 @@
+machine:
+  pre:
+    - go get golang.org/x/tools/cmd/cover github.com/golang/lint/golint github.com/kisielk/errcheck golang.org/x/tools/cmd/goimports 
+    - make develop 
+
+# dependencies:
+#   pre:
+#     - make develop 
+
+test:
+  override:
+    - ./misc/pre-push.sh 
