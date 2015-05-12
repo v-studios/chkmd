@@ -8,7 +8,7 @@ deps:
 	go get -u $(DEPS)
 
 develop: deps
-	(cd .git/hooks && ln -sf ../../misc/pre-push.bash pre-push )
+	(cd .git/hooks && ln -sf ../../misc/pre-push.sh pre-push )
 
 coverage:
 	go test -coverprofile=coverage.out
