@@ -3,8 +3,8 @@ package main
 
 import (
 	"bytes"
+	"encoding/csv"
 	"flag"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"mime"
@@ -18,21 +18,46 @@ import (
 	"sync/atomic"
 	"time"
 
-	"gopkg.in/yaml.v1"
+	yaml "gopkg.in/yaml.v1"
 )
 
 const (
-	exifDate     = "2006:01:02 15:04:05"
-	exifNanoDate = "2006:01:02 15:04:05.00"
+	exifDateOnly     = "2006:01:02"
+	exifDate         = "2006:01:02 15:04:05"
+	exifNanoDate     = "2006:01:02 15:04:05.00"
+	exifDateZone     = "2006:01:02 15:04:05-07:00"
+	exifNanoDateZone = "2006:01:02 15:04:05.00-07:00"
+	na               = "N/A"
 )
 
 var (
-	cfgfile = flag.String("c", "dev-config.yaml", "The config file to read from.")
+	cfgfile = flag.String("c", "", "The config file to read from.")
 	dir     = flag.String("d", "", "The directory to process, recursively.")
+	output  = flag.String("o", "", "A file to output to.")
 	procs   = flag.Int("p", runtime.NumCPU(), "The number of processes to run.")
+	verbose = flag.Bool("v", false, "Be noisy while processing. Really, just print errors.")
 
 	mimeTypes = make(map[string]bool)
-	wg        sync.WaitGroup
+	ingroup   sync.WaitGroup
+	outgroup  sync.WaitGroup
+	csvHeader = []string{
+		"Path",
+		"Status",
+		"Reason",
+		"NASA ID",
+		"Title",
+		"508 Description",
+		"Description",
+		"Date Created",
+		"Location",
+		"Keywords",
+		"Media Type",
+		"File Format",
+		"Center",
+		"Secondary Creator Credit",
+		"Photographer",
+		"Album",
+	}
 )
 
 // statistics tracks our statistics.
@@ -60,7 +85,12 @@ func newExif() exif {
 
 // DateCreated returns a time object representing the creation time.
 func (e exif) DateCreated() (time.Time, error) {
-	d := e.Data["Date/Time Original"]
+	var d string
+	d = e.Data["Date/Time Original"]
+	if d == "" {
+		d = e.Data["Date Created"]
+	}
+	// TODO: Do we need to try IPTC first?
 	return parseDate(d)
 }
 
@@ -73,7 +103,7 @@ func (e exif) HasDateCreated() bool {
 	return true
 }
 
-// Keywords returns the keywords value.
+// Keywords returns the IPTC keywords value.
 func (e exif) Keywords() string {
 	return e.Data["Keywords"]
 }
@@ -83,14 +113,168 @@ func (e exif) HasKeywords() bool {
 	return e.Keywords() != ""
 }
 
-// Description returns the Description.
+// Description returns the Description. Description has been mapped to IPTC Caption-Abstract tag, and also Description in XMP. So we try them in that order.
 func (e exif) Description() string {
-	return e.Data["Description"]
+	var d string
+	d = e.Data["Caption-Abstract"]
+	if d == "" {
+		d = e.Data["Description"]
+	}
+	return d
 }
 
 // Has Description returns true if Description is non-empty.
 func (e exif) HasDescription() bool {
 	return e.Description() != ""
+}
+
+// NasaId tries to return some value for NASA ID. THis is supposed to be the file name, but is also reportedly in ojb Identifier or Original Transmission reference. So we try those and fall back to the File name.
+func (e exif) NasaId() string {
+	var id string
+	id = e.Data["Job Identifier"]
+	if id == "" {
+		id = e.Data["Original Transmission Reference"]
+	}
+	if id == "" {
+		id = e.Data["File Name"]
+	}
+	return id
+}
+
+// HasNasaId returns if exif.NasaId() returns a non empty string.
+func (e exif) HasNasaId() bool {
+	return e.NasaId() != ""
+}
+
+// Title tries to return a valid title for the asset. This has been mapped to Object Name or Headline in IPTC, but can also be Title in XMP. So we try them in that order.
+func (e exif) Title() string {
+	var t string
+	t = e.Data["Object Name"]
+	if t == "" {
+		t = e.Data["Headline"]
+	}
+	if t == "" {
+		t = e.Data["Title"]
+	}
+	return t
+}
+
+// HasTitle returns  if exif.Title() returns a non empty string.
+func (e exif) HasTitle() bool {
+	return e.Title() != ""
+}
+
+// Location has been mapped to city and state. this would be mapped to a few IPTC tags: City, Province-State, and Country-Primary Location Name. There are also fields we might be able to use in XMP. It appears that what I see now in XMP are Creator City, Creator ..., But I am not sure that means the subject matter would share the info. So we are only doing IPTC here at this point.
+func (e exif) Location() string {
+	var city, region, country string
+	var addr []string
+	city = e.Data["City"]
+	if city != "" {
+		addr = append(addr, city)
+	}
+	region = e.Data["Province-State"]
+	if region != "" {
+		addr = append(addr, region)
+	}
+	country = e.Data["Country-Primary Location Name"]
+	if country != "" {
+		addr = append(addr, country)
+	}
+	return strings.Join(addr, ", ")
+}
+
+// HasLocation returns if exif.Location() reurns a non-empty string.
+func (e exif) HasLocation() bool {
+	return e.Location() != ""
+}
+
+// MediaType returns the Media Type by parsing the file's MIME type. It splits
+// the MIME type and provides the first part if it is a valid mimeType.
+func (e exif) MediaType() string {
+	if mimeTypes[e.Data["MIME Type"]] {
+		t := strings.Split(e.Data["MIME Type"], "/")[0]
+		if t == "audio" || t == "image" || t == "video" {
+			return t
+		}
+	}
+	return ""
+}
+
+// HasMediaType returns if exif.MediaType() returns a non-empty value.
+func (e exif) HasMediaType() bool {
+	return e.MediaType() != ""
+}
+
+// FileFormat returns the exiftool file format if the MIME type is in mimeTypes.
+func (e exif) FileFormat() string {
+	if mimeTypes[e.Data["MIME Type"]] {
+		return e.Data["File Type"]
+	}
+	return ""
+}
+
+// HasFileFormat returns if exif.FileType() returns a non-empty value.
+func (e exif) HasFileFormat() bool {
+	return e.FileFormat() != ""
+}
+
+// Photographer returns the IPTC By-line. It that fails it falls back to XMP Creator, then Exif Artist.
+func (e exif) Photographer() string {
+	var p string
+	p = e.Data["By-line"]
+	if p == "" {
+		p = e.Data["Creator"]
+	}
+	if p == "" {
+		p = e.Data["Artist"]
+	}
+	return p
+}
+
+// HasPhotographer returns if exif.Photographer returns a non-empty value.
+func (e exif) HasPhotographer() bool {
+	return e.Photographer() != ""
+}
+
+func (e exif) MakeErrorRow(c chan []string, p string, err error) {
+	erow := []string{p, "Rejected", err.Error()}
+	for _ = range csvHeader[3:] {
+		erow = append(erow, "")
+	}
+	c <- erow
+}
+
+func (e exif) MakeRow(c chan []string, p, status, reason string) {
+	var dc string
+	if e.HasDateCreated() {
+		dto, err := e.DateCreated()
+		if err != nil {
+			e.MakeErrorRow(c, p, err)
+			if *verbose {
+				log.Printf("Error getting DateCreated for %s: %s", p, err.Error())
+			}
+			return
+		}
+		dc = dto.Format(time.RFC3339)
+	}
+	row := []string{p,
+		status,
+		reason,
+		e.NasaId(),
+		e.Title(),
+		na,
+		e.Description(),
+		dc,
+		e.Location(),
+		e.Keywords(),
+		e.MediaType(),
+		e.FileFormat(),
+		na,
+		na,
+		e.Photographer(),
+		na,
+	}
+	c <- row
 }
 
 // parseDate, uh, parses the date from the string.
@@ -99,16 +283,29 @@ func parseDate(d string) (time.Time, error) {
 		t      time.Time
 		err    error
 		format string
+		// p      bool
 	)
 	d = strings.TrimSpace(d)
+	// exiftool converts all dates to exif like format even if they are ISO
+	// 8601. So this will all need redone if and when we get our own metadata.
 	if strings.Contains(d, ".") {
 		format = exifNanoDate
+		if strings.Contains(d, "-") {
+			format = exifNanoDateZone
+			// p = true
+		}
 	} else {
 		format = exifDate
+		if strings.Contains(d, "-") {
+			format = exifDateZone
+		}
 	}
 	t, err = time.Parse(format, d)
 	if err != nil {
-		return t, err
+		t, err = time.Parse(exifDateOnly, d)
+	}
+	if err != nil {
+		t, err = time.Parse(exifDateZone, d)
 	}
 	return t, err
 
@@ -139,16 +336,24 @@ func getExifData(p string) (exif, error) {
 
 // readConfig, uh, reads the config, and makes the values available.
 func readConfig(p string) {
-	b, err := ioutil.ReadFile(p)
-	if err != nil {
-		log.Fatalf("Couldn't open config file: %s. Error: %s", p, err)
+	var mtypes []string
+	switch {
+	case p != "":
+		b, err := ioutil.ReadFile(p)
+		if err != nil {
+			log.Fatalf("Couldn't open config file: %s. Error: %s", p, err)
+		}
+		conf := config{}
+		err = yaml.Unmarshal(b, &conf)
+		if err != nil {
+			log.Fatalf("Error parsing file %s: %s", p, err)
+		}
+		mtypes = conf.MimeTypes
+
+	case p == "":
+		mtypes = defaultTypes
 	}
-	conf := config{}
-	err = yaml.Unmarshal(b, &conf)
-	if err != nil {
-		log.Fatalf("Error parsing file %s: %s", p, err)
-	}
-	for _, t := range conf.MimeTypes {
+	for _, t := range mtypes {
 		mimeTypes[t] = true
 	}
 }
@@ -169,19 +374,41 @@ func makeWalker(files chan string, stats *statistics, types map[string]bool) fun
 	}
 }
 
-func processFiles(files chan string, stats *statistics, wg *sync.WaitGroup) {
+func processFiles(files chan string, results chan []string, stats *statistics, wg *sync.WaitGroup) {
 	defer wg.Done()
+	var status, reason string
 	for p := range files {
 		e, err := getExifData(p)
-		if err != nil {
-			log.Printf("Error processing %s: %s", p, err)
-		}
-		if e.HasDateCreated() && (e.HasKeywords() || e.HasDescription()) {
-			atomic.AddInt32(&stats.Accept, 1)
-		} else {
+		switch {
+		case err != nil:
 			atomic.AddInt32(&stats.Reject, 1)
+			e.MakeErrorRow(results, p, err)
+			if *verbose {
+				log.Printf("Error processing %s: %s\n", p, err)
+			}
+		default:
+			if e.HasDateCreated() && (e.HasKeywords() || e.HasDescription()) {
+				atomic.AddInt32(&stats.Accept, 1)
+				status = "Accepted"
+				reason = ""
+			} else {
+				atomic.AddInt32(&stats.Reject, 1)
+				status = "Incomplete"
+				reason = "Minimum metadata not provided"
+			}
+			e.MakeRow(results, p, status, reason)
 		}
 	}
+}
+
+func makeOutput(c chan []string, out *csv.Writer, wg *sync.WaitGroup) {
+	for result := range c {
+		err := out.Write(result)
+		if err != nil {
+			log.Printf("Error writing row for %s: %s\n", result[0], err.Error())
+		}
+	}
+	wg.Done()
 }
 
 func main() {
@@ -195,17 +422,48 @@ func main() {
 	files := make(chan string, 64)
 	stats := &statistics{}
 
+	_, err := os.Stat(*dir)
+	if err != nil {
+		log.Fatalf("Error opening %s: %s\n", *dir, err)
+	}
 	go func() {
-		filepath.Walk(*dir, makeWalker(files, stats, mimeTypes))
+		err := filepath.Walk(*dir, makeWalker(files, stats, mimeTypes))
+		if err != nil {
+			log.Fatalf("Error opening %s: %s\n", *dir, err)
+		}
 		close(files)
 	}()
 
+	results := make(chan []string, 64)
+
 	for i := 0; i < *procs; i++ {
-		wg.Add(1)
-		go processFiles(files, stats, &wg)
+		ingroup.Add(1)
+		go processFiles(files, results, stats, &ingroup)
 	}
 
-	wg.Wait()
-	fmt.Printf("%#v\n", stats)
-	fmt.Println("Do stats...")
+	var out *csv.Writer
+	var f os.File
+	if *output != "" {
+		f, err := os.Create(*output)
+		if err != nil {
+			log.Fatalln("Error opening output file: ", err)
+		}
+		out = csv.NewWriter(f)
+	} else {
+		out = csv.NewWriter(os.Stdout)
+	}
+	out.Write(csvHeader)
+	out.Flush()
+
+	outgroup.Add(1)
+	go func() {
+		makeOutput(results, out, &outgroup)
+	}()
+
+	ingroup.Wait()
+	close(results)
+	outgroup.Wait()
+	out.Flush()
+	f.Close()
+	log.Printf("%#v\n", stats)
 }
