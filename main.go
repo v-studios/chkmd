@@ -91,14 +91,19 @@ func newExif() exif {
 	}
 }
 
-// DateCreated returns a time object representing the creation time.
+// DateCreated returns a time object representing the creation time. It appears
+// that XMP:CreateDate is when the representation of the resource is created
+// and Photoshop:DateCreated is when the copyrightable intellectual property
+// was created.
 func (e exif) DateCreated() (time.Time, error) {
 	var d string
-	d = e.Data["Date/Time Original"]
+	d = strings.TrimSpace(e.IPTC["DateCreated"] + " " + e.IPTC["TimeCreated"])
 	if d == "" {
-		d = e.Data["Date Created"]
+		d = e.Exif["DateTimeOriginal"]
 	}
-	// TODO: Do we need to try IPTC first?
+	if d == "" {
+		d = e.XMP["DateCreated"]
+	}
 	return parseDate(d)
 }
 
@@ -111,9 +116,15 @@ func (e exif) HasDateCreated() bool {
 	return true
 }
 
-// Keywords returns the IPTC keywords value.
+// Keywords returns the IPTC keywords value, or the XMP:Subject field. AFAICT
+// there is no Exif tag for this.
 func (e exif) Keywords() string {
-	return e.Data["Keywords"]
+	var kw string
+	kw = e.IPTC["Keywords"]
+	if kw == "" {
+		kw = e.XMP["Subject"]
+	}
+	return kw
 }
 
 // HasKeywords returns true if Keywords is non-empty.
@@ -121,12 +132,17 @@ func (e exif) HasKeywords() bool {
 	return e.Keywords() != ""
 }
 
-// Description returns the Description. Description has been mapped to IPTC Caption-Abstract tag, and also Description in XMP. So we try them in that order.
+// Description returns the Description. Description has been mapped to IPTC
+// Caption-Abstract tag, and also Description in XMP. So we try them in that
+// order.
 func (e exif) Description() string {
 	var d string
-	d = e.Data["Caption-Abstract"]
+	d = e.IPTC["Caption-Abstract"]
 	if d == "" {
-		d = e.Data["Description"]
+		d = e.Exif["ImageDescription"]
+	}
+	if d == "" {
+		d = e.XMP["Description"]
 	}
 	return d
 }
@@ -311,9 +327,6 @@ func parseDate(d string) (time.Time, error) {
 	t, err = time.Parse(format, d)
 	if err != nil {
 		t, err = time.Parse(exifDateOnly, d)
-	}
-	if err != nil {
-		t, err = time.Parse(exifDateZone, d)
 	}
 	return t, err
 
