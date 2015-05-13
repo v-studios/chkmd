@@ -455,8 +455,8 @@ func main() {
 	out.Write(csvHeader)
 	out.Flush()
 
+	outgroup.Add(1)
 	go func() {
-		outgroup.Add(1)
 		makeOutput(results, out, &outgroup)
 	}()
 
