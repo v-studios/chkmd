@@ -10,11 +10,19 @@ deps:
 develop: deps
 	(cd .git/hooks && ln -sf ../../misc/pre-push.sh pre-push )
 
+build:
+	go build .
+
+build-race:
+	go build race
+
 coverage:
 	go test -coverprofile=coverage.out
 	go tool cover -func=coverage.out
 	rm coverage.out
 
+exiftool:
+	
 lint:
 	golint ./...
 

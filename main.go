@@ -76,11 +76,19 @@ type config struct {
 // Exif is our Exif data structure.
 type exif struct {
 	Data map[string]string
+	Exif map[string]string
+	IPTC map[string]string
+	XMP  map[string]string
 }
 
 // newExif is an Exif constructor.
 func newExif() exif {
-	return exif{Data: map[string]string{}}
+	return exif{
+		Data: map[string]string{},
+		Exif: map[string]string{},
+		IPTC: map[string]string{},
+		XMP:  map[string]string{},
+	}
 }
 
 // DateCreated returns a time object representing the creation time.
@@ -315,7 +323,7 @@ func parseDate(d string) (time.Time, error) {
 func getExifData(p string) (exif, error) {
 	exif := newExif()
 
-	cmd := exec.Command("exiftool", p)
+	cmd := exec.Command("exiftool", "-G", "-s", p)
 
 	var out bytes.Buffer
 	cmd.Stdout = &out
@@ -328,7 +336,20 @@ func getExifData(p string) (exif, error) {
 	lines := strings.Split(cmdOut, "\n")
 
 	for _, line := range lines {
-		exif.Data[strings.TrimSpace(line[0:32])] = strings.TrimSpace(line[33:])
+		tk := strings.TrimSpace(line[0:49])
+		t := strings.TrimSpace(tk[0:16])
+		k := strings.TrimSpace(tk[17:])
+		v := strings.TrimSpace(line[50:])
+		switch {
+		case t == "[EXIF]":
+			exif.Exif[k] = v
+		case t == "[IPTC]":
+			exif.IPTC[k] = v
+		case t == "[XMP]":
+			exif.XMP[k] = v
+		default:
+			exif.Data[k] = v
+		}
 	}
 
 	return exif, nil
