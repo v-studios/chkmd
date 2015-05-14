@@ -58,7 +58,9 @@ fi
 # TODO: choose how to manage dependencies
 # run go tests
 echo -e "\nrunning go test -race..."
-go test -race .
+go test -race -coverprofile=coverage.out .
+go tool cover -func=coverage.out
+rm coverage.out
 check_exit
 
 echo -e "\n"

@@ -9,6 +9,4 @@ machine:
 
 test:
   override:
-    - make develop
-    - make coverage
     - ./misc/pre-push.sh 

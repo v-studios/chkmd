@@ -4,9 +4,6 @@ DEPS := \
 	golang.org/x/tools/cmd/cover github.com/golang/lint/golint github.com/kisielk/errcheck golang.org/x/tools/cmd/goimports 
 
 deps: exiftool
-	go get $(DEPS)
-
-updatedeps:
 	go get -u $(DEPS)
 
 develop: deps
