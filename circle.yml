@@ -1,11 +1,11 @@
 machine:
   pre:
     - go get golang.org/x/tools/cmd/cover github.com/golang/lint/golint github.com/kisielk/errcheck golang.org/x/tools/cmd/goimports 
-    - make develop 
+    - sudo apt-get update; sudo apt-get install libimage-exiftool-perl 
 
-# dependencies:
-#   pre:
-#     - make develop 
+dependencies:
+  pre:
+    - make develop 
 
 test:
   override:
