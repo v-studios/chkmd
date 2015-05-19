@@ -36,6 +36,7 @@ Hacking
 ```shell
 cd $GOPATH/src/github.com/v-studios
 git clone git@github.com:v-studios/chkmd
+git co <somefeature-branch>
 make develop
 
 ...

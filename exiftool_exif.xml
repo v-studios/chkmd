@@ -1,0 +1,3604 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<taginfo>
+
+<table name='Exif::Main' g0='EXIF' g1='IFD0' g2='Image'>
+ <desc lang='en'>Exif</desc>
+ <tag id='1' name='InteropIndex' type='string' writable='true' g1='InteropIFD'>
+  <desc lang='en'>Interoperability Index</desc>
+  <values>
+   <key id='R03'>
+    <val lang='en'>R03 - DCF option file (Adobe RGB)</val>
+   </key>
+   <key id='R98'>
+    <val lang='en'>R98 - DCF basic file (sRGB)</val>
+   </key>
+   <key id='THM'>
+    <val lang='en'>THM - DCF thumbnail file</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='2' name='InteropVersion' type='undef' writable='true' g1='InteropIFD'>
+  <desc lang='en'>Interoperability Version</desc>
+ </tag>
+ <tag id='11' name='ProcessingSoftware' type='string' writable='true'>
+  <desc lang='en'>Processing Software</desc>
+ </tag>
+ <tag id='254' name='SubfileType' type='int32u' writable='true'>
+  <desc lang='en'>Subfile Type</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Full-resolution Image</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Reduced-resolution image</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Single page of multi-page image</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Single page of multi-page reduced-resolution image</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Transparency mask</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>Transparency mask of reduced-resolution image</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>Transparency mask of multi-page image</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>Transparency mask of reduced-resolution multi-page image</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>TIFF/IT final page</val>
+   </key>
+   <key id='16'>
+    <val lang='en'>TIFF-FX mixed raster content</val>
+   </key>
+   <key id='65537'>
+    <val lang='en'>Alternate reduced-resolution image</val>
+   </key>
+   <key id='4294967295'>
+    <val lang='en'>invalid</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='255' name='OldSubfileType' type='int16u' writable='true'>
+  <desc lang='en'>Old Subfile Type</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>Full-resolution image</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Reduced-resolution image</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Single page of multi-page image</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='256' name='ImageWidth' type='int32u' writable='true'>
+  <desc lang='en'>Image Width</desc>
+ </tag>
+ <tag id='257' name='ImageHeight' type='int32u' writable='true'>
+  <desc lang='en'>Image Height</desc>
+ </tag>
+ <tag id='258' name='BitsPerSample' type='int16u' writable='true'>
+  <desc lang='en'>Bits Per Sample</desc>
+ </tag>
+ <tag id='259' name='Compression' type='int16u' writable='true'>
+  <desc lang='en'>Compression</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>Uncompressed</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>CCITT 1D</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>T4/Group 3 Fax</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>T6/Group 4 Fax</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>LZW</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>JPEG (old-style)</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>JPEG</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>Adobe Deflate</val>
+   </key>
+   <key id='9'>
+    <val lang='en'>JBIG B&amp;W</val>
+   </key>
+   <key id='10'>
+    <val lang='en'>JBIG Color</val>
+   </key>
+   <key id='99'>
+    <val lang='en'>JPEG</val>
+   </key>
+   <key id='262'>
+    <val lang='en'>Kodak 262</val>
+   </key>
+   <key id='32766'>
+    <val lang='en'>Next</val>
+   </key>
+   <key id='32767'>
+    <val lang='en'>Sony ARW Compressed</val>
+   </key>
+   <key id='32769'>
+    <val lang='en'>Packed RAW</val>
+   </key>
+   <key id='32770'>
+    <val lang='en'>Samsung SRW Compressed</val>
+   </key>
+   <key id='32771'>
+    <val lang='en'>CCIRLEW</val>
+   </key>
+   <key id='32772'>
+    <val lang='en'>Samsung SRW Compressed 2</val>
+   </key>
+   <key id='32773'>
+    <val lang='en'>PackBits</val>
+   </key>
+   <key id='32809'>
+    <val lang='en'>Thunderscan</val>
+   </key>
+   <key id='32867'>
+    <val lang='en'>Kodak KDC Compressed</val>
+   </key>
+   <key id='32895'>
+    <val lang='en'>IT8CTPAD</val>
+   </key>
+   <key id='32896'>
+    <val lang='en'>IT8LW</val>
+   </key>
+   <key id='32897'>
+    <val lang='en'>IT8MP</val>
+   </key>
+   <key id='32898'>
+    <val lang='en'>IT8BL</val>
+   </key>
+   <key id='32908'>
+    <val lang='en'>PixarFilm</val>
+   </key>
+   <key id='32909'>
+    <val lang='en'>PixarLog</val>
+   </key>
+   <key id='32946'>
+    <val lang='en'>Deflate</val>
+   </key>
+   <key id='32947'>
+    <val lang='en'>DCS</val>
+   </key>
+   <key id='34661'>
+    <val lang='en'>JBIG</val>
+   </key>
+   <key id='34676'>
+    <val lang='en'>SGILog</val>
+   </key>
+   <key id='34677'>
+    <val lang='en'>SGILog24</val>
+   </key>
+   <key id='34712'>
+    <val lang='en'>JPEG 2000</val>
+   </key>
+   <key id='34713'>
+    <val lang='en'>Nikon NEF Compressed</val>
+   </key>
+   <key id='34715'>
+    <val lang='en'>JBIG2 TIFF FX</val>
+   </key>
+   <key id='34718'>
+    <val lang='en'>Microsoft Document Imaging (MDI) Binary Level Codec</val>
+   </key>
+   <key id='34719'>
+    <val lang='en'>Microsoft Document Imaging (MDI) Progressive Transform Codec</val>
+   </key>
+   <key id='34720'>
+    <val lang='en'>Microsoft Document Imaging (MDI) Vector</val>
+   </key>
+   <key id='34892'>
+    <val lang='en'>Lossy JPEG</val>
+   </key>
+   <key id='65000'>
+    <val lang='en'>Kodak DCR Compressed</val>
+   </key>
+   <key id='65535'>
+    <val lang='en'>Pentax PEF Compressed</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='262' name='PhotometricInterpretation' type='int16u' writable='true'>
+  <desc lang='en'>Photometric Interpretation</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>WhiteIsZero</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>BlackIsZero</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>RGB</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>RGB Palette</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Transparency Mask</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>CMYK</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>YCbCr</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>CIELab</val>
+   </key>
+   <key id='9'>
+    <val lang='en'>ICCLab</val>
+   </key>
+   <key id='10'>
+    <val lang='en'>ITULab</val>
+   </key>
+   <key id='32803'>
+    <val lang='en'>Color Filter Array</val>
+   </key>
+   <key id='32844'>
+    <val lang='en'>Pixar LogL</val>
+   </key>
+   <key id='32845'>
+    <val lang='en'>Pixar LogLuv</val>
+   </key>
+   <key id='34892'>
+    <val lang='en'>Linear Raw</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='263' name='Thresholding' type='int16u' writable='true'>
+  <desc lang='en'>Thresholding</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>No dithering or halftoning</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Ordered dither or halftone</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Randomized dither</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='264' name='CellWidth' type='int16u' writable='true'>
+  <desc lang='en'>Cell Width</desc>
+ </tag>
+ <tag id='265' name='CellLength' type='int16u' writable='true'>
+  <desc lang='en'>Cell Length</desc>
+ </tag>
+ <tag id='266' name='FillOrder' type='int16u' writable='true'>
+  <desc lang='en'>Fill Order</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>Normal</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Reversed</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='269' name='DocumentName' type='string' writable='true'>
+  <desc lang='en'>Document Name</desc>
+ </tag>
+ <tag id='270' name='ImageDescription' type='string' writable='true'>
+  <desc lang='en'>Image Description</desc>
+ </tag>
+ <tag id='271' name='Make' type='string' writable='true' g2='Camera'>
+  <desc lang='en'>Make</desc>
+ </tag>
+ <tag id='272' name='Model' type='string' writable='true' g2='Camera'>
+  <desc lang='en'>Camera Model Name</desc>
+ </tag>
+ <tag id='273' name='StripOffsets' index='0' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Strip Offsets</desc>
+ </tag>
+ <tag id='273' name='StripOffsets' index='1' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Strip Offsets</desc>
+ </tag>
+ <tag id='273' name='PreviewImageStart' index='2' type='int32u' writable='true'>
+  <desc lang='en'>Preview Image Start</desc>
+ </tag>
+ <tag id='273' name='PreviewImageStart' index='3' type='int32u' writable='true' g1='SubIFD1'>
+  <desc lang='en'>Preview Image Start</desc>
+ </tag>
+ <tag id='273' name='JpgFromRawStart' index='4' type='int32u' writable='true' g1='SubIFD2'>
+  <desc lang='en'>Jpg From Raw Start</desc>
+ </tag>
+ <tag id='274' name='Orientation' type='int16u' writable='true'>
+  <desc lang='en'>Orientation</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>Horizontal (normal)</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Mirror horizontal</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Rotate 180</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Mirror vertical</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>Mirror horizontal and rotate 270 CW</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>Rotate 90 CW</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>Mirror horizontal and rotate 90 CW</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>Rotate 270 CW</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='277' name='SamplesPerPixel' type='int16u' writable='true'>
+  <desc lang='en'>Samples Per Pixel</desc>
+ </tag>
+ <tag id='278' name='RowsPerStrip' type='int32u' writable='true'>
+  <desc lang='en'>Rows Per Strip</desc>
+ </tag>
+ <tag id='279' name='StripByteCounts' index='0' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Strip Byte Counts</desc>
+ </tag>
+ <tag id='279' name='StripByteCounts' index='1' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Strip Byte Counts</desc>
+ </tag>
+ <tag id='279' name='PreviewImageLength' index='2' type='int32u' writable='true'>
+  <desc lang='en'>Preview Image Length</desc>
+ </tag>
+ <tag id='279' name='PreviewImageLength' index='3' type='int32u' writable='true' g1='SubIFD1'>
+  <desc lang='en'>Preview Image Length</desc>
+ </tag>
+ <tag id='279' name='JpgFromRawLength' index='4' type='int32u' writable='true' g1='SubIFD2'>
+  <desc lang='en'>Jpg From Raw Length</desc>
+ </tag>
+ <tag id='280' name='MinSampleValue' type='int16u' writable='true'>
+  <desc lang='en'>Min Sample Value</desc>
+ </tag>
+ <tag id='281' name='MaxSampleValue' type='int16u' writable='true'>
+  <desc lang='en'>Max Sample Value</desc>
+ </tag>
+ <tag id='282' name='XResolution' type='rational64u' writable='true'>
+  <desc lang='en'>X Resolution</desc>
+ </tag>
+ <tag id='283' name='YResolution' type='rational64u' writable='true'>
+  <desc lang='en'>Y Resolution</desc>
+ </tag>
+ <tag id='284' name='PlanarConfiguration' type='int16u' writable='true'>
+  <desc lang='en'>Planar Configuration</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>Chunky</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Planar</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='285' name='PageName' type='string' writable='true'>
+  <desc lang='en'>Page Name</desc>
+ </tag>
+ <tag id='286' name='XPosition' type='rational64u' writable='true'>
+  <desc lang='en'>X Position</desc>
+ </tag>
+ <tag id='287' name='YPosition' type='rational64u' writable='true'>
+  <desc lang='en'>Y Position</desc>
+ </tag>
+ <tag id='288' name='FreeOffsets' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Free Offsets</desc>
+ </tag>
+ <tag id='289' name='FreeByteCounts' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Free Byte Counts</desc>
+ </tag>
+ <tag id='290' name='GrayResponseUnit' type='int16u' writable='true'>
+  <desc lang='en'>Gray Response Unit</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>0.1</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>0.001</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>0.0001</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>1e-05</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>1e-06</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='291' name='GrayResponseCurve' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Gray Response Curve</desc>
+ </tag>
+ <tag id='292' name='T4Options' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>T4 Options</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>2-Dimensional encoding</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Uncompressed</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Fill bits added</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='293' name='T6Options' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>T6 Options</desc>
+  <values>
+   <key id='2'>
+    <val lang='en'>Uncompressed</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='296' name='ResolutionUnit' type='int16u' writable='true'>
+  <desc lang='en'>Resolution Unit</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>None</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>inches</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>cm</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='297' name='PageNumber' type='int16u' count='2' writable='true'>
+  <desc lang='en'>Page Number</desc>
+ </tag>
+ <tag id='300' name='ColorResponseUnit' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Color Response Unit</desc>
+ </tag>
+ <tag id='301' name='TransferFunction' type='int16u' count='768' writable='true'>
+  <desc lang='en'>Transfer Function</desc>
+ </tag>
+ <tag id='305' name='Software' type='string' writable='true'>
+  <desc lang='en'>Software</desc>
+ </tag>
+ <tag id='306' name='ModifyDate' type='string' writable='true' g2='Time'>
+  <desc lang='en'>Modify Date</desc>
+ </tag>
+ <tag id='315' name='Artist' type='string' writable='true' g2='Author'>
+  <desc lang='en'>Artist</desc>
+ </tag>
+ <tag id='316' name='HostComputer' type='string' writable='true'>
+  <desc lang='en'>Host Computer</desc>
+ </tag>
+ <tag id='317' name='Predictor' type='int16u' writable='true'>
+  <desc lang='en'>Predictor</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>None</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Horizontal differencing</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='318' name='WhitePoint' type='rational64u' count='2' writable='true' g2='Camera'>
+  <desc lang='en'>White Point</desc>
+ </tag>
+ <tag id='319' name='PrimaryChromaticities' type='rational64u' count='6' writable='true'>
+  <desc lang='en'>Primary Chromaticities</desc>
+ </tag>
+ <tag id='320' name='ColorMap' type='binary' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Color Map</desc>
+ </tag>
+ <tag id='321' name='HalftoneHints' type='int16u' count='2' writable='true'>
+  <desc lang='en'>Halftone Hints</desc>
+ </tag>
+ <tag id='322' name='TileWidth' type='int32u' writable='true'>
+  <desc lang='en'>Tile Width</desc>
+ </tag>
+ <tag id='323' name='TileLength' type='int32u' writable='true'>
+  <desc lang='en'>Tile Length</desc>
+ </tag>
+ <tag id='324' name='TileOffsets' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Tile Offsets</desc>
+ </tag>
+ <tag id='325' name='TileByteCounts' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Tile Byte Counts</desc>
+ </tag>
+ <tag id='326' name='BadFaxLines' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Bad Fax Lines</desc>
+ </tag>
+ <tag id='327' name='CleanFaxData' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Clean Fax Data</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Clean</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Regenerated</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Unclean</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='328' name='ConsecutiveBadFaxLines' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Consecutive Bad Fax Lines</desc>
+ </tag>
+ <tag id='330' name='A100DataOffset' index='1' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>A100 Data Offset</desc>
+ </tag>
+ <tag id='332' name='InkSet' type='int16u' writable='true'>
+  <desc lang='en'>Ink Set</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>CMYK</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Not CMYK</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='333' name='InkNames' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Ink Names</desc>
+ </tag>
+ <tag id='334' name='NumberofInks' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Numberof Inks</desc>
+ </tag>
+ <tag id='336' name='DotRange' type='string' writable='true'>
+  <desc lang='en'>Dot Range</desc>
+ </tag>
+ <tag id='337' name='TargetPrinter' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Target Printer</desc>
+ </tag>
+ <tag id='338' name='ExtraSamples' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Extra Samples</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Unspecified</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Associated Alpha</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Unassociated Alpha</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='339' name='SampleFormat' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Sample Format</desc>
+  <values index='0'>
+   <key id='1'>
+    <val lang='en'>Unsigned</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Signed</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Float</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Undefined</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>Complex int</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>Complex float</val>
+   </key>
+  </values>
+  <values index='1'>
+   <key id='1'>
+    <val lang='en'>Unsigned</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Signed</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Float</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Undefined</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>Complex int</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>Complex float</val>
+   </key>
+  </values>
+  <values index='2'>
+   <key id='1'>
+    <val lang='en'>Unsigned</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Signed</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Float</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Undefined</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>Complex int</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>Complex float</val>
+   </key>
+  </values>
+  <values index='3'>
+   <key id='1'>
+    <val lang='en'>Unsigned</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Signed</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Float</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Undefined</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>Complex int</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>Complex float</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='340' name='SMinSampleValue' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>S Min Sample Value</desc>
+ </tag>
+ <tag id='341' name='SMaxSampleValue' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>S Max Sample Value</desc>
+ </tag>
+ <tag id='342' name='TransferRange' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Transfer Range</desc>
+ </tag>
+ <tag id='343' name='ClipPath' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Clip Path</desc>
+ </tag>
+ <tag id='344' name='XClipPathUnits' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>X Clip Path Units</desc>
+ </tag>
+ <tag id='345' name='YClipPathUnits' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Y Clip Path Units</desc>
+ </tag>
+ <tag id='346' name='Indexed' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Indexed</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Not indexed</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Indexed</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='347' name='JPEGTables' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>JPEG Tables</desc>
+ </tag>
+ <tag id='351' name='OPIProxy' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>OPI Proxy</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Higher resolution image does not exist</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Higher resolution image exists</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='401' name='ProfileType' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Profile Type</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Unspecified</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Group 3 FAX</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='402' name='FaxProfile' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Fax Profile</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Unknown</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Minimal B&amp;W lossless, S</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Extended B&amp;W lossless, F</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Lossless JBIG B&amp;W, J</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Lossy color and grayscale, C</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>Lossless color and grayscale, L</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>Mixed raster content, M</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>Profile T</val>
+   </key>
+   <key id='255'>
+    <val lang='en'>Multi Profiles</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='403' name='CodingMethods' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Coding Methods</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>Unspecified compression</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Modified Huffman</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Modified Read</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>Modified MR</val>
+   </key>
+   <key id='16'>
+    <val lang='en'>JBIG</val>
+   </key>
+   <key id='32'>
+    <val lang='en'>Baseline JPEG</val>
+   </key>
+   <key id='64'>
+    <val lang='en'>JBIG color</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='404' name='VersionYear' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Version Year</desc>
+ </tag>
+ <tag id='405' name='ModeNumber' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Mode Number</desc>
+ </tag>
+ <tag id='433' name='Decode' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Decode</desc>
+ </tag>
+ <tag id='434' name='DefaultImageColor' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Default Image Color</desc>
+ </tag>
+ <tag id='435' name='T82Options' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>T82 Options</desc>
+ </tag>
+ <tag id='437' name='JPEGTables' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>JPEG Tables</desc>
+ </tag>
+ <tag id='512' name='JPEGProc' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>JPEG Proc</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>Baseline</val>
+   </key>
+   <key id='14'>
+    <val lang='en'>Lossless</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='513' name='ThumbnailOffset' index='0' type='int32u' writable='true' g1='IFD1'>
+  <desc lang='en'>Thumbnail Offset</desc>
+ </tag>
+ <tag id='513' name='ThumbnailOffset' index='1' type='int32u' writable='true'>
+  <desc lang='en'>Thumbnail Offset</desc>
+ </tag>
+ <tag id='513' name='ThumbnailOffset' index='2' type='int32u' writable='true' g1='SubIFD'>
+  <desc lang='en'>Thumbnail Offset</desc>
+ </tag>
+ <tag id='513' name='PreviewImageStart' index='3' type='int32u' writable='true' g1='MakerNotes'>
+  <desc lang='en'>Preview Image Start</desc>
+ </tag>
+ <tag id='513' name='PreviewImageStart' index='4' type='int32u' writable='true'>
+  <desc lang='en'>Preview Image Start</desc>
+ </tag>
+ <tag id='513' name='JpgFromRawStart' index='5' type='int32u' writable='true' g1='SubIFD'>
+  <desc lang='en'>Jpg From Raw Start</desc>
+ </tag>
+ <tag id='513' name='JpgFromRawStart' index='6' type='int32u' writable='true' g1='IFD2'>
+  <desc lang='en'>Jpg From Raw Start</desc>
+ </tag>
+ <tag id='513' name='OtherImageStart' index='7' type='int32u' writable='true' g1='SubIFD1'>
+  <desc lang='en'>Other Image Start</desc>
+ </tag>
+ <tag id='513' name='OtherImageStart' index='8' type='int32u' writable='true' g1='SubIFD2'>
+  <desc lang='en'>Other Image Start</desc>
+ </tag>
+ <tag id='513' name='OtherImageStart' index='9' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Other Image Start</desc>
+ </tag>
+ <tag id='514' name='ThumbnailLength' index='0' type='int32u' writable='true' g1='IFD1'>
+  <desc lang='en'>Thumbnail Length</desc>
+ </tag>
+ <tag id='514' name='ThumbnailLength' index='1' type='int32u' writable='true'>
+  <desc lang='en'>Thumbnail Length</desc>
+ </tag>
+ <tag id='514' name='ThumbnailLength' index='2' type='int32u' writable='true' g1='SubIFD'>
+  <desc lang='en'>Thumbnail Length</desc>
+ </tag>
+ <tag id='514' name='PreviewImageLength' index='3' type='int32u' writable='true' g1='MakerNotes'>
+  <desc lang='en'>Preview Image Length</desc>
+ </tag>
+ <tag id='514' name='PreviewImageLength' index='4' type='int32u' writable='true'>
+  <desc lang='en'>Preview Image Length</desc>
+ </tag>
+ <tag id='514' name='JpgFromRawLength' index='5' type='int32u' writable='true' g1='SubIFD'>
+  <desc lang='en'>Jpg From Raw Length</desc>
+ </tag>
+ <tag id='514' name='JpgFromRawLength' index='6' type='int32u' writable='true' g1='IFD2'>
+  <desc lang='en'>Jpg From Raw Length</desc>
+ </tag>
+ <tag id='514' name='OtherImageLength' index='7' type='int32u' writable='true' g1='SubIFD1'>
+  <desc lang='en'>Other Image Length</desc>
+ </tag>
+ <tag id='514' name='OtherImageLength' index='8' type='int32u' writable='true' g1='SubIFD2'>
+  <desc lang='en'>Other Image Length</desc>
+ </tag>
+ <tag id='514' name='OtherImageLength' index='9' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Other Image Length</desc>
+ </tag>
+ <tag id='515' name='JPEGRestartInterval' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>JPEG Restart Interval</desc>
+ </tag>
+ <tag id='517' name='JPEGLosslessPredictors' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>JPEG Lossless Predictors</desc>
+ </tag>
+ <tag id='518' name='JPEGPointTransforms' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>JPEG Point Transforms</desc>
+ </tag>
+ <tag id='519' name='JPEGQTables' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>JPEGQ Tables</desc>
+ </tag>
+ <tag id='520' name='JPEGDCTables' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>JPEGDC Tables</desc>
+ </tag>
+ <tag id='521' name='JPEGACTables' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>JPEGAC Tables</desc>
+ </tag>
+ <tag id='529' name='YCbCrCoefficients' type='rational64u' count='3' writable='true'>
+  <desc lang='en'>Y Cb Cr Coefficients</desc>
+ </tag>
+ <tag id='530' name='YCbCrSubSampling' type='int16u' count='2' writable='true'>
+  <desc lang='en'>Y Cb Cr Sub Sampling</desc>
+  <values>
+   <key id='1 1'>
+    <val lang='en'>YCbCr4:4:4 (1 1)</val>
+   </key>
+   <key id='1 2'>
+    <val lang='en'>YCbCr4:4:0 (1 2)</val>
+   </key>
+   <key id='1 4'>
+    <val lang='en'>YCbCr4:4:1 (1 4)</val>
+   </key>
+   <key id='2 1'>
+    <val lang='en'>YCbCr4:2:2 (2 1)</val>
+   </key>
+   <key id='2 2'>
+    <val lang='en'>YCbCr4:2:0 (2 2)</val>
+   </key>
+   <key id='2 4'>
+    <val lang='en'>YCbCr4:2:1 (2 4)</val>
+   </key>
+   <key id='4 1'>
+    <val lang='en'>YCbCr4:1:1 (4 1)</val>
+   </key>
+   <key id='4 2'>
+    <val lang='en'>YCbCr4:1:0 (4 2)</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='531' name='YCbCrPositioning' type='int16u' writable='true'>
+  <desc lang='en'>Y Cb Cr Positioning</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>Centered</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Co-sited</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='532' name='ReferenceBlackWhite' type='rational64u' count='6' writable='true'>
+  <desc lang='en'>Reference Black White</desc>
+ </tag>
+ <tag id='559' name='StripRowCounts' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Strip Row Counts</desc>
+ </tag>
+ <tag id='700' name='ApplicationNotes' type='int8u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Application Notes</desc>
+ </tag>
+ <tag id='999' name='USPTOMiscellaneous' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>USPTO Miscellaneous</desc>
+ </tag>
+ <tag id='4096' name='RelatedImageFileFormat' type='string' writable='true' g1='InteropIFD'>
+  <desc lang='en'>Related Image File Format</desc>
+ </tag>
+ <tag id='4097' name='RelatedImageWidth' type='int16u' writable='true' g1='InteropIFD'>
+  <desc lang='en'>Related Image Width</desc>
+ </tag>
+ <tag id='4098' name='RelatedImageHeight' type='int16u' writable='true' g1='InteropIFD'>
+  <desc lang='en'>Related Image Height</desc>
+ </tag>
+ <tag id='18246' name='Rating' type='int16u' writable='true'>
+  <desc lang='en'>Rating</desc>
+ </tag>
+ <tag id='18247' name='XP_DIP_XML' type='undef' writable='false' g1='ExifIFD'>
+  <desc lang='en'>XP DIP XML</desc>
+ </tag>
+ <tag id='18249' name='RatingPercent' type='int16u' writable='true'>
+  <desc lang='en'>Rating Percent</desc>
+ </tag>
+ <tag id='32781' name='ImageID' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Image ID</desc>
+ </tag>
+ <tag id='32931' name='WangTag1' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Wang Tag 1</desc>
+ </tag>
+ <tag id='32932' name='WangAnnotation' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Wang Annotation</desc>
+ </tag>
+ <tag id='32933' name='WangTag3' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Wang Tag 3</desc>
+ </tag>
+ <tag id='32934' name='WangTag4' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Wang Tag 4</desc>
+ </tag>
+ <tag id='32952' name='ImageReferencePoints' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Image Reference Points</desc>
+ </tag>
+ <tag id='32953' name='RegionXformTackPoint' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Region Xform Tack Point</desc>
+ </tag>
+ <tag id='32954' name='WarpQuadrilateral' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Warp Quadrilateral</desc>
+ </tag>
+ <tag id='32955' name='AffineTransformMat' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Affine Transform Mat</desc>
+ </tag>
+ <tag id='32995' name='Matteing' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Matteing</desc>
+ </tag>
+ <tag id='32996' name='DataType' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Data Type</desc>
+ </tag>
+ <tag id='32997' name='ImageDepth' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Image Depth</desc>
+ </tag>
+ <tag id='32998' name='TileDepth' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Tile Depth</desc>
+ </tag>
+ <tag id='33300' name='ImageFullWidth' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Image Full Width</desc>
+ </tag>
+ <tag id='33301' name='ImageFullHeight' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Image Full Height</desc>
+ </tag>
+ <tag id='33302' name='TextureFormat' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Texture Format</desc>
+ </tag>
+ <tag id='33303' name='WrapModes' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Wrap Modes</desc>
+ </tag>
+ <tag id='33304' name='FovCot' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Fov Cot</desc>
+ </tag>
+ <tag id='33305' name='MatrixWorldToScreen' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Matrix World To Screen</desc>
+ </tag>
+ <tag id='33306' name='MatrixWorldToCamera' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Matrix World To Camera</desc>
+ </tag>
+ <tag id='33405' name='Model2' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Model 2</desc>
+ </tag>
+ <tag id='33421' name='CFARepeatPatternDim' type='int16u' count='2' writable='true' g1='SubIFD'>
+  <desc lang='en'>CFA Repeat Pattern Dim</desc>
+ </tag>
+ <tag id='33422' name='CFAPattern2' type='int8u' writable='true' g1='SubIFD'>
+  <desc lang='en'>CFA Pattern 2</desc>
+ </tag>
+ <tag id='33423' name='BatteryLevel' type='?' writable='false' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Battery Level</desc>
+ </tag>
+ <tag id='33432' name='Copyright' type='string' writable='true' g2='Author'>
+  <desc lang='en'>Copyright</desc>
+ </tag>
+ <tag id='33434' name='ExposureTime' type='rational64u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Exposure Time</desc>
+ </tag>
+ <tag id='33437' name='FNumber' type='rational64u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>F Number</desc>
+ </tag>
+ <tag id='33445' name='MDFileTag' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>MD File Tag</desc>
+ </tag>
+ <tag id='33446' name='MDScalePixel' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>MD Scale Pixel</desc>
+ </tag>
+ <tag id='33447' name='MDColorTable' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>MD Color Table</desc>
+ </tag>
+ <tag id='33448' name='MDLabName' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>MD Lab Name</desc>
+ </tag>
+ <tag id='33449' name='MDSampleInfo' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>MD Sample Info</desc>
+ </tag>
+ <tag id='33450' name='MDPrepDate' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>MD Prep Date</desc>
+ </tag>
+ <tag id='33451' name='MDPrepTime' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>MD Prep Time</desc>
+ </tag>
+ <tag id='33452' name='MDFileUnits' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>MD File Units</desc>
+ </tag>
+ <tag id='33550' name='PixelScale' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Pixel Scale</desc>
+ </tag>
+ <tag id='33589' name='AdventScale' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Advent Scale</desc>
+ </tag>
+ <tag id='33590' name='AdventRevision' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Advent Revision</desc>
+ </tag>
+ <tag id='33628' name='UIC1Tag' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>UIC1 Tag</desc>
+ </tag>
+ <tag id='33629' name='UIC2Tag' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>UIC2 Tag</desc>
+ </tag>
+ <tag id='33630' name='UIC3Tag' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>UIC3 Tag</desc>
+ </tag>
+ <tag id='33631' name='UIC4Tag' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>UIC4 Tag</desc>
+ </tag>
+ <tag id='33723' name='IPTC-NAA' type='int32u' writable='true'>
+  <desc lang='en'>IPTC-NAA</desc>
+ </tag>
+ <tag id='33918' name='IntergraphPacketData' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Intergraph Packet Data</desc>
+ </tag>
+ <tag id='33919' name='IntergraphFlagRegisters' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Intergraph Flag Registers</desc>
+ </tag>
+ <tag id='33920' name='IntergraphMatrix' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Intergraph Matrix</desc>
+ </tag>
+ <tag id='33921' name='INGRReserved' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>INGR Reserved</desc>
+ </tag>
+ <tag id='33922' name='ModelTiePoint' type='?' writable='false' g1='ExifIFD' g2='Location'>
+  <desc lang='en'>Model Tie Point</desc>
+ </tag>
+ <tag id='34016' name='Site' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Site</desc>
+ </tag>
+ <tag id='34017' name='ColorSequence' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Color Sequence</desc>
+ </tag>
+ <tag id='34018' name='IT8Header' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>IT8 Header</desc>
+ </tag>
+ <tag id='34019' name='RasterPadding' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Raster Padding</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Byte</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Word</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Long Word</val>
+   </key>
+   <key id='9'>
+    <val lang='en'>Sector</val>
+   </key>
+   <key id='10'>
+    <val lang='en'>Long Sector</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='34020' name='BitsPerRunLength' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Bits Per Run Length</desc>
+ </tag>
+ <tag id='34021' name='BitsPerExtendedRunLength' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Bits Per Extended Run Length</desc>
+ </tag>
+ <tag id='34022' name='ColorTable' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Color Table</desc>
+ </tag>
+ <tag id='34023' name='ImageColorIndicator' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Image Color Indicator</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Unspecified Image Color</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Specified Image Color</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='34024' name='BackgroundColorIndicator' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Background Color Indicator</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Unspecified Background Color</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Specified Background Color</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='34025' name='ImageColorValue' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Image Color Value</desc>
+ </tag>
+ <tag id='34026' name='BackgroundColorValue' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Background Color Value</desc>
+ </tag>
+ <tag id='34027' name='PixelIntensityRange' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Pixel Intensity Range</desc>
+ </tag>
+ <tag id='34028' name='TransparencyIndicator' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Transparency Indicator</desc>
+ </tag>
+ <tag id='34029' name='ColorCharacterization' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Color Characterization</desc>
+ </tag>
+ <tag id='34030' name='HCUsage' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>HC Usage</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>CT</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Line Art</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Trap</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='34031' name='TrapIndicator' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Trap Indicator</desc>
+ </tag>
+ <tag id='34032' name='CMYKEquivalent' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>CMYK Equivalent</desc>
+ </tag>
+ <tag id='34118' name='SEMInfo' type='string' writable='true'>
+  <desc lang='en'>SEM Info</desc>
+ </tag>
+ <tag id='34232' name='PixelMagicJBIGOptions' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Pixel Magic JBIG Options</desc>
+ </tag>
+ <tag id='34263' name='JPLCartoIFD' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>JPL Carto IFD</desc>
+ </tag>
+ <tag id='34264' name='ModelTransform' type='?' writable='false' g1='ExifIFD' g2='Location'>
+  <desc lang='en'>Model Transform</desc>
+ </tag>
+ <tag id='34306' name='WB_GRGBLevels' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>WB GRGB Levels</desc>
+ </tag>
+ <tag id='34687' name='TIFF_FXExtensions' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>TIFF FX Extensions</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>Resolution/Image Width</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>N Layer Profile M</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Shared Data</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>B&amp;W JBIG2</val>
+   </key>
+   <key id='16'>
+    <val lang='en'>JBIG2 Profile M</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='34688' name='MultiProfiles' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Multi Profiles</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>Profile S</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Profile F</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Profile J</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>Profile C</val>
+   </key>
+   <key id='16'>
+    <val lang='en'>Profile L</val>
+   </key>
+   <key id='32'>
+    <val lang='en'>Profile M</val>
+   </key>
+   <key id='64'>
+    <val lang='en'>Profile T</val>
+   </key>
+   <key id='128'>
+    <val lang='en'>Resolution/Image Width</val>
+   </key>
+   <key id='256'>
+    <val lang='en'>N Layer Profile M</val>
+   </key>
+   <key id='512'>
+    <val lang='en'>Shared Data</val>
+   </key>
+   <key id='1024'>
+    <val lang='en'>JBIG2 Profile M</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='34689' name='SharedData' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Shared Data</desc>
+ </tag>
+ <tag id='34690' name='T88Options' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>T88 Options</desc>
+ </tag>
+ <tag id='34732' name='ImageLayer' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Image Layer</desc>
+ </tag>
+ <tag id='34735' name='GeoTiffDirectory' type='undef' writable='true'>
+  <desc lang='en'>Geo Tiff Directory</desc>
+ </tag>
+ <tag id='34736' name='GeoTiffDoubleParams' type='undef' writable='true'>
+  <desc lang='en'>Geo Tiff Double Params</desc>
+ </tag>
+ <tag id='34737' name='GeoTiffAsciiParams' type='string' writable='true'>
+  <desc lang='en'>Geo Tiff Ascii Params</desc>
+ </tag>
+ <tag id='34750' name='JBIGOptions' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>JBIG Options</desc>
+ </tag>
+ <tag id='34850' name='ExposureProgram' type='int16u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Exposure Program</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Not Defined</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Manual</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Program AE</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Aperture-priority AE</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Shutter speed priority AE</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>Creative (Slow speed)</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>Action (High speed)</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>Portrait</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>Landscape</val>
+   </key>
+   <key id='9'>
+    <val lang='en'>Bulb</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='34852' name='SpectralSensitivity' type='string' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Spectral Sensitivity</desc>
+ </tag>
+ <tag id='34855' name='ISO' type='int16u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>ISO</desc>
+ </tag>
+ <tag id='34856' name='Opto-ElectricConvFactor' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Opto-Electric Conv Factor</desc>
+ </tag>
+ <tag id='34857' name='Interlace' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Interlace</desc>
+ </tag>
+ <tag id='34858' name='TimeZoneOffset' type='int16s' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Time Zone Offset</desc>
+ </tag>
+ <tag id='34859' name='SelfTimerMode' type='int16u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Self Timer Mode</desc>
+ </tag>
+ <tag id='34864' name='SensitivityType' type='int16u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Sensitivity Type</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Unknown</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Standard Output Sensitivity</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Recommended Exposure Index</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>ISO Speed</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Standard Output Sensitivity and Recommended Exposure Index</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>Standard Output Sensitivity and ISO Speed</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>Recommended Exposure Index and ISO Speed</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>Standard Output Sensitivity, Recommended Exposure Index and ISO Speed</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='34865' name='StandardOutputSensitivity' type='int32u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Standard Output Sensitivity</desc>
+ </tag>
+ <tag id='34866' name='RecommendedExposureIndex' type='int32u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Recommended Exposure Index</desc>
+ </tag>
+ <tag id='34867' name='ISOSpeed' type='int32u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>ISO Speed</desc>
+ </tag>
+ <tag id='34868' name='ISOSpeedLatitudeyyy' type='int32u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>ISO Speed Latitude yyy</desc>
+ </tag>
+ <tag id='34869' name='ISOSpeedLatitudezzz' type='int32u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>ISO Speed Latitude zzz</desc>
+ </tag>
+ <tag id='34908' name='FaxRecvParams' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Fax Recv Params</desc>
+ </tag>
+ <tag id='34909' name='FaxSubAddress' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Fax Sub Address</desc>
+ </tag>
+ <tag id='34910' name='FaxRecvTime' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Fax Recv Time</desc>
+ </tag>
+ <tag id='34929' name='FedexEDR' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Fedex EDR</desc>
+ </tag>
+ <tag id='36864' name='ExifVersion' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Exif Version</desc>
+ </tag>
+ <tag id='36867' name='DateTimeOriginal' type='string' writable='true' g1='ExifIFD' g2='Time'>
+  <desc lang='en'>Date/Time Original</desc>
+ </tag>
+ <tag id='36868' name='CreateDate' type='string' writable='true' g1='ExifIFD' g2='Time'>
+  <desc lang='en'>Create Date</desc>
+ </tag>
+ <tag id='36873' name='GooglePlusUploadCode' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Google Plus Upload Code</desc>
+ </tag>
+ <tag id='37121' name='ComponentsConfiguration' type='undef' count='4' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Components Configuration</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>-</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Y</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Cb</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Cr</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>R</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>G</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>B</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='37122' name='CompressedBitsPerPixel' type='rational64u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Compressed Bits Per Pixel</desc>
+ </tag>
+ <tag id='37377' name='ShutterSpeedValue' type='rational64s' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Shutter Speed Value</desc>
+ </tag>
+ <tag id='37378' name='ApertureValue' type='rational64u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Aperture Value</desc>
+ </tag>
+ <tag id='37379' name='BrightnessValue' type='rational64s' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Brightness Value</desc>
+ </tag>
+ <tag id='37380' name='ExposureCompensation' type='rational64s' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Exposure Compensation</desc>
+ </tag>
+ <tag id='37381' name='MaxApertureValue' type='rational64u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Max Aperture Value</desc>
+ </tag>
+ <tag id='37382' name='SubjectDistance' type='rational64u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Subject Distance</desc>
+ </tag>
+ <tag id='37383' name='MeteringMode' type='int16u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Metering Mode</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Unknown</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Average</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Center-weighted average</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Spot</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Multi-spot</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>Multi-segment</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>Partial</val>
+   </key>
+   <key id='255'>
+    <val lang='en'>Other</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='37384' name='LightSource' type='int16u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Light Source</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Unknown</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Daylight</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Fluorescent</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Tungsten (Incandescent)</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Flash</val>
+   </key>
+   <key id='9'>
+    <val lang='en'>Fine Weather</val>
+   </key>
+   <key id='10'>
+    <val lang='en'>Cloudy</val>
+   </key>
+   <key id='11'>
+    <val lang='en'>Shade</val>
+   </key>
+   <key id='12'>
+    <val lang='en'>Daylight Fluorescent</val>
+   </key>
+   <key id='13'>
+    <val lang='en'>Day White Fluorescent</val>
+   </key>
+   <key id='14'>
+    <val lang='en'>Cool White Fluorescent</val>
+   </key>
+   <key id='15'>
+    <val lang='en'>White Fluorescent</val>
+   </key>
+   <key id='16'>
+    <val lang='en'>Warm White Fluorescent</val>
+   </key>
+   <key id='17'>
+    <val lang='en'>Standard Light A</val>
+   </key>
+   <key id='18'>
+    <val lang='en'>Standard Light B</val>
+   </key>
+   <key id='19'>
+    <val lang='en'>Standard Light C</val>
+   </key>
+   <key id='20'>
+    <val lang='en'>D55</val>
+   </key>
+   <key id='21'>
+    <val lang='en'>D65</val>
+   </key>
+   <key id='22'>
+    <val lang='en'>D75</val>
+   </key>
+   <key id='23'>
+    <val lang='en'>D50</val>
+   </key>
+   <key id='24'>
+    <val lang='en'>ISO Studio Tungsten</val>
+   </key>
+   <key id='255'>
+    <val lang='en'>Other</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='37385' name='Flash' type='int16u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Flash</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>No Flash</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Fired</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>Fired, Return not detected</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>Fired, Return detected</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>On, Did not fire</val>
+   </key>
+   <key id='9'>
+    <val lang='en'>On, Fired</val>
+   </key>
+   <key id='13'>
+    <val lang='en'>On, Return not detected</val>
+   </key>
+   <key id='15'>
+    <val lang='en'>On, Return detected</val>
+   </key>
+   <key id='16'>
+    <val lang='en'>Off, Did not fire</val>
+   </key>
+   <key id='20'>
+    <val lang='en'>Off, Did not fire, Return not detected</val>
+   </key>
+   <key id='24'>
+    <val lang='en'>Auto, Did not fire</val>
+   </key>
+   <key id='25'>
+    <val lang='en'>Auto, Fired</val>
+   </key>
+   <key id='29'>
+    <val lang='en'>Auto, Fired, Return not detected</val>
+   </key>
+   <key id='31'>
+    <val lang='en'>Auto, Fired, Return detected</val>
+   </key>
+   <key id='32'>
+    <val lang='en'>No flash function</val>
+   </key>
+   <key id='48'>
+    <val lang='en'>Off, No flash function</val>
+   </key>
+   <key id='65'>
+    <val lang='en'>Fired, Red-eye reduction</val>
+   </key>
+   <key id='69'>
+    <val lang='en'>Fired, Red-eye reduction, Return not detected</val>
+   </key>
+   <key id='71'>
+    <val lang='en'>Fired, Red-eye reduction, Return detected</val>
+   </key>
+   <key id='73'>
+    <val lang='en'>On, Red-eye reduction</val>
+   </key>
+   <key id='77'>
+    <val lang='en'>On, Red-eye reduction, Return not detected</val>
+   </key>
+   <key id='79'>
+    <val lang='en'>On, Red-eye reduction, Return detected</val>
+   </key>
+   <key id='80'>
+    <val lang='en'>Off, Red-eye reduction</val>
+   </key>
+   <key id='88'>
+    <val lang='en'>Auto, Did not fire, Red-eye reduction</val>
+   </key>
+   <key id='89'>
+    <val lang='en'>Auto, Fired, Red-eye reduction</val>
+   </key>
+   <key id='93'>
+    <val lang='en'>Auto, Fired, Red-eye reduction, Return not detected</val>
+   </key>
+   <key id='95'>
+    <val lang='en'>Auto, Fired, Red-eye reduction, Return detected</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='37386' name='FocalLength' type='rational64u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Focal Length</desc>
+ </tag>
+ <tag id='37387' name='FlashEnergy' type='?' writable='false' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Flash Energy</desc>
+ </tag>
+ <tag id='37388' name='SpatialFrequencyResponse' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Spatial Frequency Response</desc>
+ </tag>
+ <tag id='37389' name='Noise' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Noise</desc>
+ </tag>
+ <tag id='37390' name='FocalPlaneXResolution' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Focal Plane X Resolution</desc>
+ </tag>
+ <tag id='37391' name='FocalPlaneYResolution' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Focal Plane Y Resolution</desc>
+ </tag>
+ <tag id='37392' name='FocalPlaneResolutionUnit' type='?' writable='false' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Focal Plane Resolution Unit</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>None</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>inches</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>cm</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>mm</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>um</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='37393' name='ImageNumber' type='int32u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Image Number</desc>
+ </tag>
+ <tag id='37394' name='SecurityClassification' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Security Classification</desc>
+  <values>
+   <key id='C'>
+    <val lang='en'>Confidential</val>
+   </key>
+   <key id='R'>
+    <val lang='en'>Restricted</val>
+   </key>
+   <key id='S'>
+    <val lang='en'>Secret</val>
+   </key>
+   <key id='T'>
+    <val lang='en'>Top Secret</val>
+   </key>
+   <key id='U'>
+    <val lang='en'>Unclassified</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='37395' name='ImageHistory' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Image History</desc>
+ </tag>
+ <tag id='37396' name='SubjectArea' type='int16u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Subject Area</desc>
+ </tag>
+ <tag id='37397' name='ExposureIndex' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Exposure Index</desc>
+ </tag>
+ <tag id='37398' name='TIFF-EPStandardID' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>TIFF-EP Standard ID</desc>
+ </tag>
+ <tag id='37399' name='SensingMethod' type='?' writable='false' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Sensing Method</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>Monochrome area</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>One-chip color area</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Two-chip color area</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Three-chip color area</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>Color sequential area</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>Monochrome linear</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>Trilinear</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>Color sequential linear</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='37434' name='CIP3DataFile' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>CIP3 Data File</desc>
+ </tag>
+ <tag id='37435' name='CIP3Sheet' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>CIP3 Sheet</desc>
+ </tag>
+ <tag id='37436' name='CIP3Side' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>CIP3 Side</desc>
+ </tag>
+ <tag id='37439' name='StoNits' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Sto Nits</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteApple' index='0' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Apple</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteNikon' index='1' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Nikon</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteCanon' index='2' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Canon</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteCasio' index='3' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Casio</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteCasio2' index='4' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Casio 2</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteFLIR' index='5' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note FLIR</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteFujiFilm' index='6' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Fuji Film</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteGE' index='7' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note GE</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteGE2' index='8' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note GE2</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteHasselblad' index='9' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Hasselblad</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteHP' index='10' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note HP</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteHP2' index='11' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note HP2</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteHP4' index='12' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note HP4</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteHP6' index='13' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note HP6</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteISL' index='14' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note ISL</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteJVC' index='15' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note JVC</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteJVCText' index='16' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note JVC Text</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteKodak1a' index='17' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Kodak 1a</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteKodak1b' index='18' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Kodak 1b</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteKodak2' index='19' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Kodak 2</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteKodak3' index='20' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Kodak 3</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteKodak4' index='21' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Kodak 4</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteKodak5' index='22' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Kodak 5</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteKodak6a' index='23' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Kodak 6a</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteKodak6b' index='24' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Kodak 6b</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteKodak7' index='25' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Kodak 7</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteKodak8a' index='26' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Kodak 8a</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteKodak8b' index='27' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Kodak 8b</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteKodak8c' index='28' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Kodak 8c</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteKodak9' index='29' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Kodak 9</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteKodak10' index='30' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Kodak 10</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteKodak11' index='31' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Kodak 11</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteKodakUnknown' index='32' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Kodak Unknown</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteKyocera' index='33' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Kyocera</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteMinolta' index='34' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Minolta</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteMinolta2' index='35' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Minolta 2</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteMinolta3' index='36' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Minolta 3</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteNikon2' index='37' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Nikon 2</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteNikon3' index='38' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Nikon 3</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteNintendo' index='39' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Nintendo</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteOlympus' index='40' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Olympus</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteOlympus2' index='41' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Olympus 2</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteLeica' index='42' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Leica</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteLeica2' index='43' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Leica 2</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteLeica3' index='44' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Leica 3</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteLeica4' index='45' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Leica 4</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteLeica5' index='46' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Leica 5</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteLeica6' index='47' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Leica 6</desc>
+ </tag>
+ <tag id='37500' name='MakerNotePanasonic' index='48' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Panasonic</desc>
+ </tag>
+ <tag id='37500' name='MakerNotePanasonic2' index='49' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Panasonic 2</desc>
+ </tag>
+ <tag id='37500' name='MakerNotePentax' index='50' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Pentax</desc>
+ </tag>
+ <tag id='37500' name='MakerNotePentax2' index='51' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Pentax 2</desc>
+ </tag>
+ <tag id='37500' name='MakerNotePentax3' index='52' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Pentax 3</desc>
+ </tag>
+ <tag id='37500' name='MakerNotePentax4' index='53' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Pentax 4</desc>
+ </tag>
+ <tag id='37500' name='MakerNotePentax5' index='54' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Pentax 5</desc>
+ </tag>
+ <tag id='37500' name='MakerNotePentax6' index='55' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Pentax 6</desc>
+ </tag>
+ <tag id='37500' name='MakerNotePhaseOne' index='56' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Phase One</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteReconyx' index='57' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Reconyx</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteRicoh' index='58' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Ricoh</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteRicoh2' index='59' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Ricoh 2</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteRicohText' index='60' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Ricoh Text</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteSamsung1a' index='61' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Samsung 1a</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteSamsung1b' index='62' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Samsung 1b</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteSamsung2' index='63' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Samsung 2</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteSanyo' index='64' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Sanyo</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteSanyoC4' index='65' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Sanyo C4</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteSanyoPatch' index='66' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Sanyo Patch</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteSigma' index='67' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Sigma</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteSony' index='68' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Sony</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteSony2' index='69' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Sony 2</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteSony3' index='70' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Sony 3</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteSony4' index='71' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Sony 4</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteSony5' index='72' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Sony 5</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteSonyEricsson' index='73' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Sony Ericsson</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteSonySRF' index='74' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Sony SRF</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteUnknownText' index='75' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Unknown Text</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteUnknownBinary' index='76' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Unknown Binary</desc>
+ </tag>
+ <tag id='37500' name='MakerNoteUnknown' index='77' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Maker Note Unknown</desc>
+ </tag>
+ <tag id='37510' name='UserComment' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>User Comment</desc>
+ </tag>
+ <tag id='37520' name='SubSecTime' type='string' writable='true' g1='ExifIFD' g2='Time'>
+  <desc lang='en'>Sub Sec Time</desc>
+ </tag>
+ <tag id='37521' name='SubSecTimeOriginal' type='string' writable='true' g1='ExifIFD' g2='Time'>
+  <desc lang='en'>Sub Sec Time Original</desc>
+ </tag>
+ <tag id='37522' name='SubSecTimeDigitized' type='string' writable='true' g1='ExifIFD' g2='Time'>
+  <desc lang='en'>Sub Sec Time Digitized</desc>
+ </tag>
+ <tag id='37679' name='MSDocumentText' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>MS Document Text</desc>
+ </tag>
+ <tag id='37680' name='MSPropertySetStorage' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>MS Property Set Storage</desc>
+ </tag>
+ <tag id='37681' name='MSDocumentTextPosition' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>MS Document Text Position</desc>
+ </tag>
+ <tag id='37724' name='ImageSourceData' type='undef' writable='true'>
+  <desc lang='en'>Image Source Data</desc>
+ </tag>
+ <tag id='40091' name='XPTitle' type='int8u' writable='true'>
+  <desc lang='en'>XP Title</desc>
+ </tag>
+ <tag id='40092' name='XPComment' type='int8u' writable='true'>
+  <desc lang='en'>XP Comment</desc>
+ </tag>
+ <tag id='40093' name='XPAuthor' type='int8u' writable='true' g2='Author'>
+  <desc lang='en'>XP Author</desc>
+ </tag>
+ <tag id='40094' name='XPKeywords' type='int8u' writable='true'>
+  <desc lang='en'>XP Keywords</desc>
+ </tag>
+ <tag id='40095' name='XPSubject' type='int8u' writable='true'>
+  <desc lang='en'>XP Subject</desc>
+ </tag>
+ <tag id='40960' name='FlashpixVersion' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Flashpix Version</desc>
+ </tag>
+ <tag id='40961' name='ColorSpace' type='int16u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Color Space</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>sRGB</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Adobe RGB</val>
+   </key>
+   <key id='65533'>
+    <val lang='en'>Wide Gamut RGB</val>
+   </key>
+   <key id='65534'>
+    <val lang='en'>ICC Profile</val>
+   </key>
+   <key id='65535'>
+    <val lang='en'>Uncalibrated</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='40962' name='ExifImageWidth' type='int16u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Exif Image Width</desc>
+ </tag>
+ <tag id='40963' name='ExifImageHeight' type='int16u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Exif Image Height</desc>
+ </tag>
+ <tag id='40964' name='RelatedSoundFile' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Related Sound File</desc>
+ </tag>
+ <tag id='41483' name='FlashEnergy' type='rational64u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Flash Energy</desc>
+ </tag>
+ <tag id='41484' name='SpatialFrequencyResponse' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Spatial Frequency Response</desc>
+ </tag>
+ <tag id='41485' name='Noise' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Noise</desc>
+ </tag>
+ <tag id='41486' name='FocalPlaneXResolution' type='rational64u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Focal Plane X Resolution</desc>
+ </tag>
+ <tag id='41487' name='FocalPlaneYResolution' type='rational64u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Focal Plane Y Resolution</desc>
+ </tag>
+ <tag id='41488' name='FocalPlaneResolutionUnit' type='int16u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Focal Plane Resolution Unit</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>None</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>inches</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>cm</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>mm</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>um</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='41489' name='ImageNumber' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Image Number</desc>
+ </tag>
+ <tag id='41490' name='SecurityClassification' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Security Classification</desc>
+ </tag>
+ <tag id='41491' name='ImageHistory' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Image History</desc>
+ </tag>
+ <tag id='41492' name='SubjectLocation' type='int16u' count='2' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Subject Location</desc>
+ </tag>
+ <tag id='41493' name='ExposureIndex' type='rational64u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Exposure Index</desc>
+ </tag>
+ <tag id='41494' name='TIFF-EPStandardID' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>TIFF-EP Standard ID</desc>
+ </tag>
+ <tag id='41495' name='SensingMethod' type='int16u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Sensing Method</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>Not defined</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>One-chip color area</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Two-chip color area</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Three-chip color area</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>Color sequential area</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>Trilinear</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>Color sequential linear</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='41728' name='FileSource' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>File Source</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>Film Scanner</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Reflection Print Scanner</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Digital Camera</val>
+   </key>
+   <key id='\x03\x00\x00\x00'>
+    <val lang='en'>Sigma Digital Camera</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='41729' name='SceneType' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Scene Type</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>Directly photographed</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='41730' name='CFAPattern' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>CFA Pattern</desc>
+ </tag>
+ <tag id='41985' name='CustomRendered' type='int16u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Custom Rendered</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Normal</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Custom</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='41986' name='ExposureMode' type='int16u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Exposure Mode</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Auto</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Manual</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Auto bracket</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='41987' name='WhiteBalance' type='int16u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>White Balance</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Auto</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Manual</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='41988' name='DigitalZoomRatio' type='rational64u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Digital Zoom Ratio</desc>
+ </tag>
+ <tag id='41989' name='FocalLengthIn35mmFormat' type='int16u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Focal Length In 35mm Format</desc>
+ </tag>
+ <tag id='41990' name='SceneCaptureType' type='int16u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Scene Capture Type</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Standard</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Landscape</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Portrait</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Night</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='41991' name='GainControl' type='int16u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Gain Control</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>None</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Low gain up</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>High gain up</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Low gain down</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>High gain down</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='41992' name='Contrast' type='int16u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Contrast</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Normal</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Low</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>High</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='41993' name='Saturation' type='int16u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Saturation</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Normal</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Low</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>High</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='41994' name='Sharpness' type='int16u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Sharpness</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Normal</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Soft</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Hard</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='41995' name='DeviceSettingDescription' type='?' writable='false' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Device Setting Description</desc>
+ </tag>
+ <tag id='41996' name='SubjectDistanceRange' type='int16u' writable='true' g1='ExifIFD' g2='Camera'>
+  <desc lang='en'>Subject Distance Range</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Unknown</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Macro</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Close</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Distant</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='42016' name='ImageUniqueID' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Image Unique ID</desc>
+ </tag>
+ <tag id='42032' name='OwnerName' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Owner Name</desc>
+ </tag>
+ <tag id='42033' name='SerialNumber' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Serial Number</desc>
+ </tag>
+ <tag id='42034' name='LensInfo' type='rational64u' count='4' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Lens Info</desc>
+ </tag>
+ <tag id='42035' name='LensMake' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Lens Make</desc>
+ </tag>
+ <tag id='42036' name='LensModel' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Lens Model</desc>
+ </tag>
+ <tag id='42037' name='LensSerialNumber' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Lens Serial Number</desc>
+ </tag>
+ <tag id='42112' name='GDALMetadata' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>GDAL Metadata</desc>
+ </tag>
+ <tag id='42113' name='GDALNoData' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>GDAL No Data</desc>
+ </tag>
+ <tag id='42240' name='Gamma' type='rational64u' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Gamma</desc>
+ </tag>
+ <tag id='44992' name='ExpandSoftware' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Expand Software</desc>
+ </tag>
+ <tag id='44993' name='ExpandLens' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Expand Lens</desc>
+ </tag>
+ <tag id='44994' name='ExpandFilm' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Expand Film</desc>
+ </tag>
+ <tag id='44995' name='ExpandFilterLens' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Expand Filter Lens</desc>
+ </tag>
+ <tag id='44996' name='ExpandScanner' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Expand Scanner</desc>
+ </tag>
+ <tag id='44997' name='ExpandFlashLamp' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Expand Flash Lamp</desc>
+ </tag>
+ <tag id='48129' name='PixelFormat' type='undef' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Pixel Format</desc>
+  <values>
+   <key id='5'>
+    <val lang='en'>Black &amp; White</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>8-bit Gray</val>
+   </key>
+   <key id='9'>
+    <val lang='en'>16-bit BGR555</val>
+   </key>
+   <key id='10'>
+    <val lang='en'>16-bit BGR565</val>
+   </key>
+   <key id='11'>
+    <val lang='en'>16-bit Gray</val>
+   </key>
+   <key id='12'>
+    <val lang='en'>24-bit BGR</val>
+   </key>
+   <key id='13'>
+    <val lang='en'>24-bit RGB</val>
+   </key>
+   <key id='14'>
+    <val lang='en'>32-bit BGR</val>
+   </key>
+   <key id='15'>
+    <val lang='en'>32-bit BGRA</val>
+   </key>
+   <key id='16'>
+    <val lang='en'>32-bit PBGRA</val>
+   </key>
+   <key id='17'>
+    <val lang='en'>32-bit Gray Float</val>
+   </key>
+   <key id='18'>
+    <val lang='en'>48-bit RGB Fixed Point</val>
+   </key>
+   <key id='19'>
+    <val lang='en'>32-bit BGR101010</val>
+   </key>
+   <key id='21'>
+    <val lang='en'>48-bit RGB</val>
+   </key>
+   <key id='22'>
+    <val lang='en'>64-bit RGBA</val>
+   </key>
+   <key id='23'>
+    <val lang='en'>64-bit PRGBA</val>
+   </key>
+   <key id='24'>
+    <val lang='en'>96-bit RGB Fixed Point</val>
+   </key>
+   <key id='25'>
+    <val lang='en'>128-bit RGBA Float</val>
+   </key>
+   <key id='26'>
+    <val lang='en'>128-bit PRGBA Float</val>
+   </key>
+   <key id='27'>
+    <val lang='en'>128-bit RGB Float</val>
+   </key>
+   <key id='28'>
+    <val lang='en'>32-bit CMYK</val>
+   </key>
+   <key id='29'>
+    <val lang='en'>64-bit RGBA Fixed Point</val>
+   </key>
+   <key id='30'>
+    <val lang='en'>128-bit RGBA Fixed Point</val>
+   </key>
+   <key id='31'>
+    <val lang='en'>64-bit CMYK</val>
+   </key>
+   <key id='32'>
+    <val lang='en'>24-bit 3 Channels</val>
+   </key>
+   <key id='33'>
+    <val lang='en'>32-bit 4 Channels</val>
+   </key>
+   <key id='34'>
+    <val lang='en'>40-bit 5 Channels</val>
+   </key>
+   <key id='35'>
+    <val lang='en'>48-bit 6 Channels</val>
+   </key>
+   <key id='36'>
+    <val lang='en'>56-bit 7 Channels</val>
+   </key>
+   <key id='37'>
+    <val lang='en'>64-bit 8 Channels</val>
+   </key>
+   <key id='38'>
+    <val lang='en'>48-bit 3 Channels</val>
+   </key>
+   <key id='39'>
+    <val lang='en'>64-bit 4 Channels</val>
+   </key>
+   <key id='40'>
+    <val lang='en'>80-bit 5 Channels</val>
+   </key>
+   <key id='41'>
+    <val lang='en'>96-bit 6 Channels</val>
+   </key>
+   <key id='42'>
+    <val lang='en'>112-bit 7 Channels</val>
+   </key>
+   <key id='43'>
+    <val lang='en'>128-bit 8 Channels</val>
+   </key>
+   <key id='44'>
+    <val lang='en'>40-bit CMYK Alpha</val>
+   </key>
+   <key id='45'>
+    <val lang='en'>80-bit CMYK Alpha</val>
+   </key>
+   <key id='46'>
+    <val lang='en'>32-bit 3 Channels Alpha</val>
+   </key>
+   <key id='47'>
+    <val lang='en'>40-bit 4 Channels Alpha</val>
+   </key>
+   <key id='48'>
+    <val lang='en'>48-bit 5 Channels Alpha</val>
+   </key>
+   <key id='49'>
+    <val lang='en'>56-bit 6 Channels Alpha</val>
+   </key>
+   <key id='50'>
+    <val lang='en'>64-bit 7 Channels Alpha</val>
+   </key>
+   <key id='51'>
+    <val lang='en'>72-bit 8 Channels Alpha</val>
+   </key>
+   <key id='52'>
+    <val lang='en'>64-bit 3 Channels Alpha</val>
+   </key>
+   <key id='53'>
+    <val lang='en'>80-bit 4 Channels Alpha</val>
+   </key>
+   <key id='54'>
+    <val lang='en'>96-bit 5 Channels Alpha</val>
+   </key>
+   <key id='55'>
+    <val lang='en'>112-bit 6 Channels Alpha</val>
+   </key>
+   <key id='56'>
+    <val lang='en'>128-bit 7 Channels Alpha</val>
+   </key>
+   <key id='57'>
+    <val lang='en'>144-bit 8 Channels Alpha</val>
+   </key>
+   <key id='58'>
+    <val lang='en'>64-bit RGBA Half</val>
+   </key>
+   <key id='59'>
+    <val lang='en'>48-bit RGB Half</val>
+   </key>
+   <key id='61'>
+    <val lang='en'>32-bit RGBE</val>
+   </key>
+   <key id='62'>
+    <val lang='en'>16-bit Gray Half</val>
+   </key>
+   <key id='63'>
+    <val lang='en'>32-bit Gray Fixed Point</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='48130' name='Transformation' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Transformation</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Horizontal (normal)</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Mirror vertical</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Mirror horizontal</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Rotate 180</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Rotate 90 CW</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>Mirror horizontal and rotate 90 CW</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>Mirror horizontal and rotate 270 CW</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>Rotate 270 CW</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='48131' name='Uncompressed' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Uncompressed</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>No</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Yes</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='48132' name='ImageType' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Image Type</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>Preview</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Page</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='48256' name='ImageWidth' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Image Width</desc>
+ </tag>
+ <tag id='48257' name='ImageHeight' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Image Height</desc>
+ </tag>
+ <tag id='48258' name='WidthResolution' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Width Resolution</desc>
+ </tag>
+ <tag id='48259' name='HeightResolution' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Height Resolution</desc>
+ </tag>
+ <tag id='48320' name='ImageOffset' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Image Offset</desc>
+ </tag>
+ <tag id='48321' name='ImageByteCount' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Image Byte Count</desc>
+ </tag>
+ <tag id='48322' name='AlphaOffset' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Alpha Offset</desc>
+ </tag>
+ <tag id='48323' name='AlphaByteCount' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Alpha Byte Count</desc>
+ </tag>
+ <tag id='48324' name='ImageDataDiscard' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Image Data Discard</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Full Resolution</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Flexbits Discarded</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>HighPass Frequency Data Discarded</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Highpass and LowPass Frequency Data Discarded</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='48325' name='AlphaDataDiscard' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Alpha Data Discard</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Full Resolution</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Flexbits Discarded</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>HighPass Frequency Data Discarded</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Highpass and LowPass Frequency Data Discarded</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='50215' name='OceScanjobDesc' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Oce Scanjob Desc</desc>
+ </tag>
+ <tag id='50216' name='OceApplicationSelector' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Oce Application Selector</desc>
+ </tag>
+ <tag id='50217' name='OceIDNumber' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Oce ID Number</desc>
+ </tag>
+ <tag id='50218' name='OceImageLogic' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Oce Image Logic</desc>
+ </tag>
+ <tag id='50255' name='Annotations' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Annotations</desc>
+ </tag>
+ <tag id='50341' name='PrintIM' type='undef' writable='true'>
+  <desc lang='en'>Print Image Matching</desc>
+ </tag>
+ <tag id='50547' name='OriginalFileName' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Original File Name</desc>
+ </tag>
+ <tag id='50560' name='USPTOOriginalContentType' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>USPTO Original Content Type</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Text or Drawing</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Grayscale</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Color</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='50706' name='DNGVersion' type='int8u' count='4' writable='true'>
+  <desc lang='en'>DNG Version</desc>
+ </tag>
+ <tag id='50707' name='DNGBackwardVersion' type='int8u' count='4' writable='true'>
+  <desc lang='en'>DNG Backward Version</desc>
+ </tag>
+ <tag id='50708' name='UniqueCameraModel' type='string' writable='true'>
+  <desc lang='en'>Unique Camera Model</desc>
+ </tag>
+ <tag id='50709' name='LocalizedCameraModel' type='string' writable='true'>
+  <desc lang='en'>Localized Camera Model</desc>
+ </tag>
+ <tag id='50710' name='CFAPlaneColor' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>CFA Plane Color</desc>
+ </tag>
+ <tag id='50711' name='CFALayout' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>CFA Layout</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>Rectangular</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Even columns offset down 1/2 row</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Even columns offset up 1/2 row</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Even rows offset right 1/2 column</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>Even rows offset left 1/2 column</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>Even rows offset up by 1/2 row, even columns offset left by 1/2 column</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>Even rows offset up by 1/2 row, even columns offset right by 1/2 column</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>Even rows offset down by 1/2 row, even columns offset left by 1/2 column</val>
+   </key>
+   <key id='9'>
+    <val lang='en'>Even rows offset down by 1/2 row, even columns offset right by 1/2 column</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='50712' name='LinearizationTable' type='int16u' writable='true' g1='SubIFD'>
+  <desc lang='en'>Linearization Table</desc>
+ </tag>
+ <tag id='50713' name='BlackLevelRepeatDim' type='int16u' count='2' writable='true' g1='SubIFD'>
+  <desc lang='en'>Black Level Repeat Dim</desc>
+ </tag>
+ <tag id='50714' name='BlackLevel' type='rational64u' writable='true' g1='SubIFD'>
+  <desc lang='en'>Black Level</desc>
+ </tag>
+ <tag id='50715' name='BlackLevelDeltaH' type='rational64s' writable='true' g1='SubIFD'>
+  <desc lang='en'>Black Level Delta H</desc>
+ </tag>
+ <tag id='50716' name='BlackLevelDeltaV' type='rational64s' writable='true' g1='SubIFD'>
+  <desc lang='en'>Black Level Delta V</desc>
+ </tag>
+ <tag id='50717' name='WhiteLevel' type='int32u' writable='true' g1='SubIFD'>
+  <desc lang='en'>White Level</desc>
+ </tag>
+ <tag id='50718' name='DefaultScale' type='rational64u' count='2' writable='true' g1='SubIFD'>
+  <desc lang='en'>Default Scale</desc>
+ </tag>
+ <tag id='50719' name='DefaultCropOrigin' type='int32u' count='2' writable='true' g1='SubIFD'>
+  <desc lang='en'>Default Crop Origin</desc>
+ </tag>
+ <tag id='50720' name='DefaultCropSize' type='int32u' count='2' writable='true' g1='SubIFD'>
+  <desc lang='en'>Default Crop Size</desc>
+ </tag>
+ <tag id='50721' name='ColorMatrix1' type='rational64s' writable='true'>
+  <desc lang='en'>Color Matrix 1</desc>
+ </tag>
+ <tag id='50722' name='ColorMatrix2' type='rational64s' writable='true'>
+  <desc lang='en'>Color Matrix 2</desc>
+ </tag>
+ <tag id='50723' name='CameraCalibration1' type='rational64s' writable='true'>
+  <desc lang='en'>Camera Calibration 1</desc>
+ </tag>
+ <tag id='50724' name='CameraCalibration2' type='rational64s' writable='true'>
+  <desc lang='en'>Camera Calibration 2</desc>
+ </tag>
+ <tag id='50725' name='ReductionMatrix1' type='rational64s' writable='true'>
+  <desc lang='en'>Reduction Matrix 1</desc>
+ </tag>
+ <tag id='50726' name='ReductionMatrix2' type='rational64s' writable='true'>
+  <desc lang='en'>Reduction Matrix 2</desc>
+ </tag>
+ <tag id='50727' name='AnalogBalance' type='rational64u' writable='true'>
+  <desc lang='en'>Analog Balance</desc>
+ </tag>
+ <tag id='50728' name='AsShotNeutral' type='rational64u' writable='true'>
+  <desc lang='en'>As Shot Neutral</desc>
+ </tag>
+ <tag id='50729' name='AsShotWhiteXY' type='rational64u' count='2' writable='true'>
+  <desc lang='en'>As Shot White XY</desc>
+ </tag>
+ <tag id='50730' name='BaselineExposure' type='rational64s' writable='true'>
+  <desc lang='en'>Baseline Exposure</desc>
+ </tag>
+ <tag id='50731' name='BaselineNoise' type='rational64u' writable='true'>
+  <desc lang='en'>Baseline Noise</desc>
+ </tag>
+ <tag id='50732' name='BaselineSharpness' type='rational64u' writable='true'>
+  <desc lang='en'>Baseline Sharpness</desc>
+ </tag>
+ <tag id='50733' name='BayerGreenSplit' type='int32u' writable='true' g1='SubIFD'>
+  <desc lang='en'>Bayer Green Split</desc>
+ </tag>
+ <tag id='50734' name='LinearResponseLimit' type='rational64u' writable='true'>
+  <desc lang='en'>Linear Response Limit</desc>
+ </tag>
+ <tag id='50735' name='CameraSerialNumber' type='string' writable='true' g2='Camera'>
+  <desc lang='en'>Camera Serial Number</desc>
+ </tag>
+ <tag id='50736' name='DNGLensInfo' type='rational64u' count='4' writable='true' g2='Camera'>
+  <desc lang='en'>DNG Lens Info</desc>
+ </tag>
+ <tag id='50737' name='ChromaBlurRadius' type='rational64u' writable='true' g1='SubIFD'>
+  <desc lang='en'>Chroma Blur Radius</desc>
+ </tag>
+ <tag id='50738' name='AntiAliasStrength' type='rational64u' writable='true' g1='SubIFD'>
+  <desc lang='en'>Anti Alias Strength</desc>
+ </tag>
+ <tag id='50739' name='ShadowScale' type='rational64u' writable='true'>
+  <desc lang='en'>Shadow Scale</desc>
+ </tag>
+ <tag id='50740' name='DNGAdobeData' index='1' type='undef' writable='true'>
+  <desc lang='en'>DNG Adobe Data</desc>
+ </tag>
+ <tag id='50740' name='DNGPrivateData' index='4' type='undef' writable='true'>
+  <desc lang='en'>DNG Private Data</desc>
+ </tag>
+ <tag id='50741' name='MakerNoteSafety' type='int16u' writable='true'>
+  <desc lang='en'>Maker Note Safety</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Unsafe</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Safe</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='50752' name='RawImageSegmentation' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Raw Image Segmentation</desc>
+ </tag>
+ <tag id='50778' name='CalibrationIlluminant1' type='int16u' writable='true'>
+  <desc lang='en'>Calibration Illuminant 1</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Unknown</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Daylight</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Fluorescent</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Tungsten (Incandescent)</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Flash</val>
+   </key>
+   <key id='9'>
+    <val lang='en'>Fine Weather</val>
+   </key>
+   <key id='10'>
+    <val lang='en'>Cloudy</val>
+   </key>
+   <key id='11'>
+    <val lang='en'>Shade</val>
+   </key>
+   <key id='12'>
+    <val lang='en'>Daylight Fluorescent</val>
+   </key>
+   <key id='13'>
+    <val lang='en'>Day White Fluorescent</val>
+   </key>
+   <key id='14'>
+    <val lang='en'>Cool White Fluorescent</val>
+   </key>
+   <key id='15'>
+    <val lang='en'>White Fluorescent</val>
+   </key>
+   <key id='16'>
+    <val lang='en'>Warm White Fluorescent</val>
+   </key>
+   <key id='17'>
+    <val lang='en'>Standard Light A</val>
+   </key>
+   <key id='18'>
+    <val lang='en'>Standard Light B</val>
+   </key>
+   <key id='19'>
+    <val lang='en'>Standard Light C</val>
+   </key>
+   <key id='20'>
+    <val lang='en'>D55</val>
+   </key>
+   <key id='21'>
+    <val lang='en'>D65</val>
+   </key>
+   <key id='22'>
+    <val lang='en'>D75</val>
+   </key>
+   <key id='23'>
+    <val lang='en'>D50</val>
+   </key>
+   <key id='24'>
+    <val lang='en'>ISO Studio Tungsten</val>
+   </key>
+   <key id='255'>
+    <val lang='en'>Other</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='50779' name='CalibrationIlluminant2' type='int16u' writable='true'>
+  <desc lang='en'>Calibration Illuminant 2</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Unknown</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Daylight</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Fluorescent</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Tungsten (Incandescent)</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Flash</val>
+   </key>
+   <key id='9'>
+    <val lang='en'>Fine Weather</val>
+   </key>
+   <key id='10'>
+    <val lang='en'>Cloudy</val>
+   </key>
+   <key id='11'>
+    <val lang='en'>Shade</val>
+   </key>
+   <key id='12'>
+    <val lang='en'>Daylight Fluorescent</val>
+   </key>
+   <key id='13'>
+    <val lang='en'>Day White Fluorescent</val>
+   </key>
+   <key id='14'>
+    <val lang='en'>Cool White Fluorescent</val>
+   </key>
+   <key id='15'>
+    <val lang='en'>White Fluorescent</val>
+   </key>
+   <key id='16'>
+    <val lang='en'>Warm White Fluorescent</val>
+   </key>
+   <key id='17'>
+    <val lang='en'>Standard Light A</val>
+   </key>
+   <key id='18'>
+    <val lang='en'>Standard Light B</val>
+   </key>
+   <key id='19'>
+    <val lang='en'>Standard Light C</val>
+   </key>
+   <key id='20'>
+    <val lang='en'>D55</val>
+   </key>
+   <key id='21'>
+    <val lang='en'>D65</val>
+   </key>
+   <key id='22'>
+    <val lang='en'>D75</val>
+   </key>
+   <key id='23'>
+    <val lang='en'>D50</val>
+   </key>
+   <key id='24'>
+    <val lang='en'>ISO Studio Tungsten</val>
+   </key>
+   <key id='255'>
+    <val lang='en'>Other</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='50780' name='BestQualityScale' type='rational64u' writable='true' g1='SubIFD'>
+  <desc lang='en'>Best Quality Scale</desc>
+ </tag>
+ <tag id='50781' name='RawDataUniqueID' type='int8u' count='16' writable='true'>
+  <desc lang='en'>Raw Data Unique ID</desc>
+ </tag>
+ <tag id='50784' name='AliasLayerMetadata' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Alias Layer Metadata</desc>
+ </tag>
+ <tag id='50827' name='OriginalRawFileName' type='string' writable='true'>
+  <desc lang='en'>Original Raw File Name</desc>
+ </tag>
+ <tag id='50828' name='OriginalRawFileData' type='undef' writable='true'>
+  <desc lang='en'>Original Raw File Data</desc>
+ </tag>
+ <tag id='50829' name='ActiveArea' type='int32u' count='4' writable='true' g1='SubIFD'>
+  <desc lang='en'>Active Area</desc>
+ </tag>
+ <tag id='50830' name='MaskedAreas' type='int32u' count='4' writable='true' g1='SubIFD'>
+  <desc lang='en'>Masked Areas</desc>
+ </tag>
+ <tag id='50831' name='AsShotICCProfile' type='undef' writable='true'>
+  <desc lang='en'>As Shot ICC Profile</desc>
+ </tag>
+ <tag id='50832' name='AsShotPreProfileMatrix' type='rational64s' writable='true'>
+  <desc lang='en'>As Shot Pre Profile Matrix</desc>
+ </tag>
+ <tag id='50833' name='CurrentICCProfile' type='undef' writable='true'>
+  <desc lang='en'>Current ICC Profile</desc>
+ </tag>
+ <tag id='50834' name='CurrentPreProfileMatrix' type='rational64s' writable='true'>
+  <desc lang='en'>Current Pre Profile Matrix</desc>
+ </tag>
+ <tag id='50879' name='ColorimetricReference' type='int16u' writable='true'>
+  <desc lang='en'>Colorimetric Reference</desc>
+ </tag>
+ <tag id='50885' name='SRawType' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>SRaw Type</desc>
+ </tag>
+ <tag id='50898' name='PanasonicTitle' type='undef' writable='true'>
+  <desc lang='en'>Panasonic Title</desc>
+ </tag>
+ <tag id='50899' name='PanasonicTitle2' type='undef' writable='true'>
+  <desc lang='en'>Panasonic Title 2</desc>
+ </tag>
+ <tag id='50931' name='CameraCalibrationSig' type='string' writable='true'>
+  <desc lang='en'>Camera Calibration Sig</desc>
+ </tag>
+ <tag id='50932' name='ProfileCalibrationSig' type='string' writable='true'>
+  <desc lang='en'>Profile Calibration Sig</desc>
+ </tag>
+ <tag id='50934' name='AsShotProfileName' type='string' writable='true'>
+  <desc lang='en'>As Shot Profile Name</desc>
+ </tag>
+ <tag id='50935' name='NoiseReductionApplied' type='rational64u' writable='true' g1='SubIFD'>
+  <desc lang='en'>Noise Reduction Applied</desc>
+ </tag>
+ <tag id='50936' name='ProfileName' type='string' writable='true'>
+  <desc lang='en'>Profile Name</desc>
+ </tag>
+ <tag id='50937' name='ProfileHueSatMapDims' type='int32u' count='3' writable='true'>
+  <desc lang='en'>Profile Hue Sat Map Dims</desc>
+ </tag>
+ <tag id='50938' name='ProfileHueSatMapData1' type='float' writable='true'>
+  <desc lang='en'>Profile Hue Sat Map Data 1</desc>
+ </tag>
+ <tag id='50939' name='ProfileHueSatMapData2' type='float' writable='true'>
+  <desc lang='en'>Profile Hue Sat Map Data 2</desc>
+ </tag>
+ <tag id='50940' name='ProfileToneCurve' type='float' writable='true'>
+  <desc lang='en'>Profile Tone Curve</desc>
+ </tag>
+ <tag id='50941' name='ProfileEmbedPolicy' type='int32u' writable='true'>
+  <desc lang='en'>Profile Embed Policy</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Allow Copying</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Embed if Used</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Never Embed</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>No Restrictions</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='50942' name='ProfileCopyright' type='string' writable='true'>
+  <desc lang='en'>Profile Copyright</desc>
+ </tag>
+ <tag id='50964' name='ForwardMatrix1' type='rational64s' writable='true'>
+  <desc lang='en'>Forward Matrix 1</desc>
+ </tag>
+ <tag id='50965' name='ForwardMatrix2' type='rational64s' writable='true'>
+  <desc lang='en'>Forward Matrix 2</desc>
+ </tag>
+ <tag id='50966' name='PreviewApplicationName' type='string' writable='true'>
+  <desc lang='en'>Preview Application Name</desc>
+ </tag>
+ <tag id='50967' name='PreviewApplicationVersion' type='string' writable='true'>
+  <desc lang='en'>Preview Application Version</desc>
+ </tag>
+ <tag id='50968' name='PreviewSettingsName' type='string' writable='true'>
+  <desc lang='en'>Preview Settings Name</desc>
+ </tag>
+ <tag id='50969' name='PreviewSettingsDigest' type='int8u' writable='true'>
+  <desc lang='en'>Preview Settings Digest</desc>
+ </tag>
+ <tag id='50970' name='PreviewColorSpace' type='int32u' writable='true'>
+  <desc lang='en'>Preview Color Space</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Unknown</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Gray Gamma 2.2</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>sRGB</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Adobe RGB</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>ProPhoto RGB</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='50971' name='PreviewDateTime' type='string' writable='true' g2='Time'>
+  <desc lang='en'>Preview Date Time</desc>
+ </tag>
+ <tag id='50972' name='RawImageDigest' type='int8u' count='16' writable='true'>
+  <desc lang='en'>Raw Image Digest</desc>
+ </tag>
+ <tag id='50973' name='OriginalRawFileDigest' type='int8u' count='16' writable='true'>
+  <desc lang='en'>Original Raw File Digest</desc>
+ </tag>
+ <tag id='50974' name='SubTileBlockSize' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Sub Tile Block Size</desc>
+ </tag>
+ <tag id='50975' name='RowInterleaveFactor' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Row Interleave Factor</desc>
+ </tag>
+ <tag id='50981' name='ProfileLookTableDims' type='int32u' count='3' writable='true'>
+  <desc lang='en'>Profile Look Table Dims</desc>
+ </tag>
+ <tag id='50982' name='ProfileLookTableData' type='float' writable='true'>
+  <desc lang='en'>Profile Look Table Data</desc>
+ </tag>
+ <tag id='51008' name='OpcodeList1' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Opcode List 1</desc>
+ </tag>
+ <tag id='51009' name='OpcodeList2' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Opcode List 2</desc>
+ </tag>
+ <tag id='51022' name='OpcodeList3' type='?' writable='false' g1='ExifIFD'>
+  <desc lang='en'>Opcode List 3</desc>
+ </tag>
+ <tag id='51041' name='NoiseProfile' type='double' writable='true' g1='SubIFD'>
+  <desc lang='en'>Noise Profile</desc>
+ </tag>
+ <tag id='51043' name='TimeCodes' type='int8u' writable='true'>
+  <desc lang='en'>Time Codes</desc>
+ </tag>
+ <tag id='51044' name='FrameRate' type='rational64s' writable='true'>
+  <desc lang='en'>Frame Rate</desc>
+ </tag>
+ <tag id='51058' name='TStop' type='rational64u' writable='true'>
+  <desc lang='en'>T Stop</desc>
+ </tag>
+ <tag id='51081' name='ReelName' type='string' writable='true'>
+  <desc lang='en'>Reel Name</desc>
+ </tag>
+ <tag id='51089' name='OriginalDefaultFinalSize' type='int32u' count='2' writable='true'>
+  <desc lang='en'>Original Default Final Size</desc>
+ </tag>
+ <tag id='51090' name='OriginalBestQualitySize' type='int32u' count='2' writable='true'>
+  <desc lang='en'>Original Best Quality Size</desc>
+ </tag>
+ <tag id='51091' name='OriginalDefaultCropSize' type='rational64u' count='2' writable='true'>
+  <desc lang='en'>Original Default Crop Size</desc>
+ </tag>
+ <tag id='51105' name='CameraLabel' type='string' writable='true'>
+  <desc lang='en'>Camera Label</desc>
+ </tag>
+ <tag id='51107' name='ProfileHueSatMapEncoding' type='int32u' writable='true'>
+  <desc lang='en'>Profile Hue Sat Map Encoding</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Linear</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>sRGB</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='51108' name='ProfileLookTableEncoding' type='int32u' writable='true'>
+  <desc lang='en'>Profile Look Table Encoding</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Linear</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>sRGB</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='51109' name='BaselineExposureOffset' type='rational64s' writable='true'>
+  <desc lang='en'>Baseline Exposure Offset</desc>
+ </tag>
+ <tag id='51110' name='DefaultBlackRender' type='int32u' writable='true'>
+  <desc lang='en'>Default Black Render</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Auto</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>None</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='51111' name='NewRawImageDigest' type='int8u' count='16' writable='true'>
+  <desc lang='en'>New Raw Image Digest</desc>
+ </tag>
+ <tag id='51112' name='RawToPreviewGain' type='double' writable='true'>
+  <desc lang='en'>Raw To Preview Gain</desc>
+ </tag>
+ <tag id='51125' name='DefaultUserCrop' type='rational64u' count='4' writable='true' g1='SubIFD'>
+  <desc lang='en'>Default User Crop</desc>
+ </tag>
+ <tag id='59932' name='Padding' type='undef' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Padding</desc>
+ </tag>
+ <tag id='59933' name='OffsetSchema' type='int32s' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Offset Schema</desc>
+ </tag>
+ <tag id='65000' name='OwnerName' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Owner Name</desc>
+ </tag>
+ <tag id='65001' name='SerialNumber' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Serial Number</desc>
+ </tag>
+ <tag id='65002' name='Lens' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Lens</desc>
+ </tag>
+ <tag id='65100' name='RawFile' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Raw File</desc>
+ </tag>
+ <tag id='65101' name='Converter' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Converter</desc>
+ </tag>
+ <tag id='65102' name='WhiteBalance' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>White Balance</desc>
+ </tag>
+ <tag id='65105' name='Exposure' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Exposure</desc>
+ </tag>
+ <tag id='65106' name='Shadows' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Shadows</desc>
+ </tag>
+ <tag id='65107' name='Brightness' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Brightness</desc>
+ </tag>
+ <tag id='65108' name='Contrast' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Contrast</desc>
+ </tag>
+ <tag id='65109' name='Saturation' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Saturation</desc>
+ </tag>
+ <tag id='65110' name='Sharpness' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Sharpness</desc>
+ </tag>
+ <tag id='65111' name='Smoothness' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Smoothness</desc>
+ </tag>
+ <tag id='65112' name='MoireFilter' type='string' writable='true' g1='ExifIFD'>
+  <desc lang='en'>Moire Filter</desc>
+ </tag>
+</table>
+
+<table name='Extra' g0='File' g1='File' g2='Image'>
+ <desc lang='en'>Extra</desc>
+ <tag id='EXIF' name='EXIF' type='?' writable='true' g0='EXIF' g1='EXIF'>
+  <desc lang='en'>EXIF</desc>
+ </tag>
+</table>
+
+<table name='GPS::Main' g0='EXIF' g1='GPS' g2='Location'>
+ <desc lang='en'>GPS</desc>
+ <tag id='0' name='GPSVersionID' type='int8u' count='4' writable='true'>
+  <desc lang='en'>GPS Version ID</desc>
+ </tag>
+ <tag id='1' name='GPSLatitudeRef' type='string' count='2' writable='true'>
+  <desc lang='en'>GPS Latitude Ref</desc>
+  <values>
+   <key id='N'>
+    <val lang='en'>North</val>
+   </key>
+   <key id='S'>
+    <val lang='en'>South</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='2' name='GPSLatitude' type='rational64u' count='3' writable='true'>
+  <desc lang='en'>GPS Latitude</desc>
+ </tag>
+ <tag id='3' name='GPSLongitudeRef' type='string' count='2' writable='true'>
+  <desc lang='en'>GPS Longitude Ref</desc>
+  <values>
+   <key id='E'>
+    <val lang='en'>East</val>
+   </key>
+   <key id='W'>
+    <val lang='en'>West</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='4' name='GPSLongitude' type='rational64u' count='3' writable='true'>
+  <desc lang='en'>GPS Longitude</desc>
+ </tag>
+ <tag id='5' name='GPSAltitudeRef' type='int8u' writable='true'>
+  <desc lang='en'>GPS Altitude Ref</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Above Sea Level</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Below Sea Level</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='6' name='GPSAltitude' type='rational64u' writable='true'>
+  <desc lang='en'>GPS Altitude</desc>
+ </tag>
+ <tag id='7' name='GPSTimeStamp' type='rational64u' count='3' writable='true' g2='Time'>
+  <desc lang='en'>GPS Time Stamp</desc>
+ </tag>
+ <tag id='8' name='GPSSatellites' type='string' writable='true'>
+  <desc lang='en'>GPS Satellites</desc>
+ </tag>
+ <tag id='9' name='GPSStatus' type='string' count='2' writable='true'>
+  <desc lang='en'>GPS Status</desc>
+  <values>
+   <key id='A'>
+    <val lang='en'>Measurement Active</val>
+   </key>
+   <key id='V'>
+    <val lang='en'>Measurement Void</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='10' name='GPSMeasureMode' type='string' count='2' writable='true'>
+  <desc lang='en'>GPS Measure Mode</desc>
+  <values>
+   <key id='2'>
+    <val lang='en'>2-Dimensional Measurement</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>3-Dimensional Measurement</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='11' name='GPSDOP' type='rational64u' writable='true'>
+  <desc lang='en'>GPS Dilution Of Precision</desc>
+ </tag>
+ <tag id='12' name='GPSSpeedRef' type='string' count='2' writable='true'>
+  <desc lang='en'>GPS Speed Ref</desc>
+  <values>
+   <key id='K'>
+    <val lang='en'>km/h</val>
+   </key>
+   <key id='M'>
+    <val lang='en'>mph</val>
+   </key>
+   <key id='N'>
+    <val lang='en'>knots</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='13' name='GPSSpeed' type='rational64u' writable='true'>
+  <desc lang='en'>GPS Speed</desc>
+ </tag>
+ <tag id='14' name='GPSTrackRef' type='string' count='2' writable='true'>
+  <desc lang='en'>GPS Track Ref</desc>
+  <values>
+   <key id='M'>
+    <val lang='en'>Magnetic North</val>
+   </key>
+   <key id='T'>
+    <val lang='en'>True North</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='15' name='GPSTrack' type='rational64u' writable='true'>
+  <desc lang='en'>GPS Track</desc>
+ </tag>
+ <tag id='16' name='GPSImgDirectionRef' type='string' count='2' writable='true'>
+  <desc lang='en'>GPS Img Direction Ref</desc>
+  <values>
+   <key id='M'>
+    <val lang='en'>Magnetic North</val>
+   </key>
+   <key id='T'>
+    <val lang='en'>True North</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='17' name='GPSImgDirection' type='rational64u' writable='true'>
+  <desc lang='en'>GPS Img Direction</desc>
+ </tag>
+ <tag id='18' name='GPSMapDatum' type='string' writable='true'>
+  <desc lang='en'>GPS Map Datum</desc>
+ </tag>
+ <tag id='19' name='GPSDestLatitudeRef' type='string' count='2' writable='true'>
+  <desc lang='en'>GPS Dest Latitude Ref</desc>
+  <values>
+   <key id='N'>
+    <val lang='en'>North</val>
+   </key>
+   <key id='S'>
+    <val lang='en'>South</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='20' name='GPSDestLatitude' type='rational64u' count='3' writable='true'>
+  <desc lang='en'>GPS Dest Latitude</desc>
+ </tag>
+ <tag id='21' name='GPSDestLongitudeRef' type='string' count='2' writable='true'>
+  <desc lang='en'>GPS Dest Longitude Ref</desc>
+  <values>
+   <key id='E'>
+    <val lang='en'>East</val>
+   </key>
+   <key id='W'>
+    <val lang='en'>West</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='22' name='GPSDestLongitude' type='rational64u' count='3' writable='true'>
+  <desc lang='en'>GPS Dest Longitude</desc>
+ </tag>
+ <tag id='23' name='GPSDestBearingRef' type='string' count='2' writable='true'>
+  <desc lang='en'>GPS Dest Bearing Ref</desc>
+  <values>
+   <key id='M'>
+    <val lang='en'>Magnetic North</val>
+   </key>
+   <key id='T'>
+    <val lang='en'>True North</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='24' name='GPSDestBearing' type='rational64u' writable='true'>
+  <desc lang='en'>GPS Dest Bearing</desc>
+ </tag>
+ <tag id='25' name='GPSDestDistanceRef' type='string' count='2' writable='true'>
+  <desc lang='en'>GPS Dest Distance Ref</desc>
+  <values>
+   <key id='K'>
+    <val lang='en'>Kilometers</val>
+   </key>
+   <key id='M'>
+    <val lang='en'>Miles</val>
+   </key>
+   <key id='N'>
+    <val lang='en'>Nautical Miles</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='26' name='GPSDestDistance' type='rational64u' writable='true'>
+  <desc lang='en'>GPS Dest Distance</desc>
+ </tag>
+ <tag id='27' name='GPSProcessingMethod' type='undef' writable='true'>
+  <desc lang='en'>GPS Processing Method</desc>
+ </tag>
+ <tag id='28' name='GPSAreaInformation' type='undef' writable='true'>
+  <desc lang='en'>GPS Area Information</desc>
+ </tag>
+ <tag id='29' name='GPSDateStamp' type='string' count='11' writable='true' g2='Time'>
+  <desc lang='en'>GPS Date Stamp</desc>
+ </tag>
+ <tag id='30' name='GPSDifferential' type='int16u' writable='true'>
+  <desc lang='en'>GPS Differential</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>No Correction</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Differential Corrected</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='31' name='GPSHPositioningError' type='rational64u' writable='true'>
+  <desc lang='en'>GPS Horizontal Positioning Error</desc>
+ </tag>
+</table>
+
+<table name='PanasonicRaw::Main' g0='EXIF' g1='IFD0' g2='Image'>
+ <desc lang='en'>PanasonicRaw</desc>
+ <tag id='1' name='PanasonicRawVersion' type='undef' writable='true'>
+  <desc lang='en'>Panasonic Raw Version</desc>
+ </tag>
+ <tag id='2' name='SensorWidth' type='?' writable='false'>
+  <desc lang='en'>Sensor Width</desc>
+ </tag>
+ <tag id='3' name='SensorHeight' type='?' writable='false'>
+  <desc lang='en'>Sensor Height</desc>
+ </tag>
+ <tag id='4' name='SensorTopBorder' type='?' writable='false'>
+  <desc lang='en'>Sensor Top Border</desc>
+ </tag>
+ <tag id='5' name='SensorLeftBorder' type='?' writable='false'>
+  <desc lang='en'>Sensor Left Border</desc>
+ </tag>
+ <tag id='6' name='SensorBottomBorder' type='?' writable='false'>
+  <desc lang='en'>Sensor Bottom Border</desc>
+ </tag>
+ <tag id='7' name='SensorRightBorder' type='?' writable='false'>
+  <desc lang='en'>Sensor Right Border</desc>
+ </tag>
+ <tag id='8' name='BlackLevel1' type='int16u' writable='true'>
+  <desc lang='en'>Black Level 1</desc>
+ </tag>
+ <tag id='9' name='BlackLevel2' type='int16u' writable='true'>
+  <desc lang='en'>Black Level 2</desc>
+ </tag>
+ <tag id='10' name='BlackLevel3' type='int16u' writable='true'>
+  <desc lang='en'>Black Level 3</desc>
+ </tag>
+ <tag id='14' name='LinearityLimitRed' type='int16u' writable='true'>
+  <desc lang='en'>Linearity Limit Red</desc>
+ </tag>
+ <tag id='15' name='LinearityLimitGreen' type='int16u' writable='true'>
+  <desc lang='en'>Linearity Limit Green</desc>
+ </tag>
+ <tag id='16' name='LinearityLimitBlue' type='int16u' writable='true'>
+  <desc lang='en'>Linearity Limit Blue</desc>
+ </tag>
+ <tag id='17' name='RedBalance' type='int16u' writable='true'>
+  <desc lang='en'>Red Balance</desc>
+ </tag>
+ <tag id='18' name='BlueBalance' type='int16u' writable='true'>
+  <desc lang='en'>Blue Balance</desc>
+ </tag>
+ <tag id='23' name='ISO' type='int16u' writable='true'>
+  <desc lang='en'>ISO</desc>
+ </tag>
+ <tag id='24' name='HighISOMultiplierRed' type='int16u' writable='true'>
+  <desc lang='en'>High ISO Multiplier Red</desc>
+ </tag>
+ <tag id='25' name='HighISOMultiplierGreen' type='int16u' writable='true'>
+  <desc lang='en'>High ISO Multiplier Green</desc>
+ </tag>
+ <tag id='26' name='HighISOMultiplierBlue' type='int16u' writable='true'>
+  <desc lang='en'>High ISO Multiplier Blue</desc>
+ </tag>
+ <tag id='28' name='BlackLevelRed' type='int16u' writable='true'>
+  <desc lang='en'>Black Level Red</desc>
+ </tag>
+ <tag id='29' name='BlackLevelGreen' type='int16u' writable='true'>
+  <desc lang='en'>Black Level Green</desc>
+ </tag>
+ <tag id='30' name='BlackLevelBlue' type='int16u' writable='true'>
+  <desc lang='en'>Black Level Blue</desc>
+ </tag>
+ <tag id='36' name='WBRedLevel' type='int16u' writable='true'>
+  <desc lang='en'>WB Red Level</desc>
+ </tag>
+ <tag id='37' name='WBGreenLevel' type='int16u' writable='true'>
+  <desc lang='en'>WB Green Level</desc>
+ </tag>
+ <tag id='38' name='WBBlueLevel' type='int16u' writable='true'>
+  <desc lang='en'>WB Blue Level</desc>
+ </tag>
+ <tag id='46' name='JpgFromRaw' type='undef' writable='true'>
+  <desc lang='en'>Jpg From Raw</desc>
+ </tag>
+ <tag id='271' name='Make' type='string' writable='true' g2='Camera'>
+  <desc lang='en'>Make</desc>
+ </tag>
+ <tag id='272' name='Model' type='string' writable='true' g2='Camera'>
+  <desc lang='en'>Camera Model Name</desc>
+ </tag>
+ <tag id='273' name='StripOffsets' type='?' writable='false'>
+  <desc lang='en'>Strip Offsets</desc>
+ </tag>
+ <tag id='274' name='Orientation' type='int16u' writable='true'>
+  <desc lang='en'>Orientation</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>Horizontal (normal)</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Mirror horizontal</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Rotate 180</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Mirror vertical</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>Mirror horizontal and rotate 270 CW</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>Rotate 90 CW</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>Mirror horizontal and rotate 90 CW</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>Rotate 270 CW</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='278' name='RowsPerStrip' type='?' writable='false'>
+  <desc lang='en'>Rows Per Strip</desc>
+ </tag>
+ <tag id='279' name='StripByteCounts' type='?' writable='false'>
+  <desc lang='en'>Strip Byte Counts</desc>
+ </tag>
+ <tag id='280' name='RawDataOffset' type='?' writable='false'>
+  <desc lang='en'>Raw Data Offset</desc>
+ </tag>
+ <tag id='700' name='ApplicationNotes' type='int8u' writable='true'>
+  <desc lang='en'>Application Notes</desc>
+ </tag>
+ <tag id='33723' name='IPTC-NAA' type='int32u' writable='true'>
+  <desc lang='en'>IPTC-NAA</desc>
+ </tag>
+</table>
+
+</taginfo>
