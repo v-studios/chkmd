@@ -1,7 +1,7 @@
 ## Not a fan of makefiles still but here go's
 
 DEPS := \
-	golang.org/x/tools/cmd/cover github.com/golang/lint/golint github.com/kisielk/errcheck golang.org/x/tools/cmd/goimports 
+	golang.org/x/tools/cmd/cover github.com/golang/lint/golint github.com/kisielk/errcheck golang.org/x/tools/cmd/goimports golang.org/x/tools/cmd/vet 
 
 deps: exiftool
 	go get -u $(DEPS)
