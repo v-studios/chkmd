@@ -6,6 +6,11 @@ Next release
 
  - 
 
+0.6.1 (Released 2015-05-26)
+---------------------------
+
+ - Parse dates with positive offsets.
+
 0.6.0 (Released 2015-05-26)
 ---------------------------
 
