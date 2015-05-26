@@ -64,7 +64,9 @@ func TestIPTCDateTime(t *testing.T) {
 		{" 2015:01:09", "", time.Date(2015, time.January, 9, 0, 0, 0, 0, time.UTC)},
 		{" 2015:01:09", "01:32:16", time.Date(2015, time.January, 9, 01, 32, 16, 0, time.UTC)},
 		{"2015:01:09", "01:32:16-08:00", time.Date(2015, time.January, 9, 01, 32, 16, 0, PST)},
+		{"2015:01:09", "01:32:16+00:00", time.Date(2015, time.January, 9, 01, 32, 16, 0, time.UTC)},
 		{"2015:01:09", "01:32:16.23-05:00", time.Date(2015, time.January, 9, 01, 32, 16, 230000000, EST)},
+		{"2015:01:09", "01:32:16.23+00:00", time.Date(2015, time.January, 9, 01, 32, 16, 230000000, time.UTC)},
 	}
 	for _, tv := range testValues {
 		e := exif{
@@ -94,6 +96,8 @@ func TestExifDateTime(t *testing.T) {
 		{" 2015:01:09 01:32:16", time.Date(2015, time.January, 9, 01, 32, 16, 0, time.UTC)},
 		{"2015:01:09 01:32:16-08:00", time.Date(2015, time.January, 9, 01, 32, 16, 0, PST)},
 		{"2015:01:09 01:32:16.23-05:00", time.Date(2015, time.January, 9, 01, 32, 16, 230000000, EST)},
+		{"2015:01:09 01:32:16+00:00", time.Date(2015, time.January, 9, 01, 32, 16, 0, time.UTC)},
+		{"2015:01:09 01:32:16.23+00:00", time.Date(2015, time.January, 9, 01, 32, 16, 230000000, time.UTC)},
 	}
 	for _, tv := range testValues {
 		e := exif{
@@ -122,6 +126,8 @@ func TestXMPDateTime(t *testing.T) {
 		{" 2015:01:09 01:32:16", time.Date(2015, time.January, 9, 01, 32, 16, 0, time.UTC)},
 		{"2015:01:09 01:32:16-08:00", time.Date(2015, time.January, 9, 01, 32, 16, 0, PST)},
 		{"2015:01:09 01:32:16.23-05:00", time.Date(2015, time.January, 9, 01, 32, 16, 230000000, EST)},
+		{"2015:01:09 01:32:16+00:00", time.Date(2015, time.January, 9, 01, 32, 16, 0, time.UTC)},
+		{"2015:01:09 01:32:16.23+00:00", time.Date(2015, time.January, 9, 01, 32, 16, 230000000, time.UTC)},
 	}
 	for _, tv := range testValues {
 		e := exif{
