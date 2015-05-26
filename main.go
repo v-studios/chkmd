@@ -487,13 +487,13 @@ func parseDate(d string) (time.Time, error) {
 	// 8601. So this will all need redone if and when we get our own metadata.
 	if strings.Contains(d, ".") {
 		format = exifNanoDate
-		if strings.Contains(d, "-") {
+		if strings.Contains(d, "-") || strings.Contains(d, "+") {
 			format = exifNanoDateZone
 			// p = true
 		}
 	} else {
 		format = exifDate
-		if strings.Contains(d, "-") {
+		if strings.Contains(d, "-") || strings.Contains(d, "+") {
 			format = exifDateZone
 		}
 	}
