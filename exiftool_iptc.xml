@@ -1,0 +1,905 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<taginfo>
+
+<table name='Extra' g0='File' g1='File' g2='Image'>
+ <desc lang='en'>Extra</desc>
+ <tag id='IPTC' name='IPTC' type='?' writable='true' g0='IPTC' g1='IPTC'>
+  <desc lang='en'>IPTC</desc>
+ </tag>
+</table>
+
+<table name='IPTC::ApplicationRecord' g0='IPTC' g1='IPTC' g2='Other'>
+ <desc lang='en'>IPTC ApplicationRecord</desc>
+ <tag id='0' name='ApplicationRecordVersion' type='int16u' writable='true'>
+  <desc lang='en'>Application Record Version</desc>
+ </tag>
+ <tag id='3' name='ObjectTypeReference' type='string' count='67' writable='true'>
+  <desc lang='en'>Object Type Reference</desc>
+ </tag>
+ <tag id='4' name='ObjectAttributeReference' type='string' count='68' writable='true'>
+  <desc lang='en'>Object Attribute Reference</desc>
+ </tag>
+ <tag id='5' name='ObjectName' type='string' count='64' writable='true'>
+  <desc lang='en'>Object Name</desc>
+ </tag>
+ <tag id='7' name='EditStatus' type='string' count='64' writable='true'>
+  <desc lang='en'>Edit Status</desc>
+ </tag>
+ <tag id='8' name='EditorialUpdate' type='digits' count='2' writable='true'>
+  <desc lang='en'>Editorial Update</desc>
+  <values>
+   <key id='01'>
+    <val lang='en'>Additional language</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='10' name='Urgency' type='digits' count='1' writable='true'>
+  <desc lang='en'>Urgency</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>0 (reserved)</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>1 (most urgent)</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>2</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>3</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>4</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>5 (normal urgency)</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>6</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>7</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>8 (least urgent)</val>
+   </key>
+   <key id='9'>
+    <val lang='en'>9 (user-defined priority)</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='12' name='SubjectReference' type='string' count='236' writable='true'>
+  <desc lang='en'>Subject Reference</desc>
+ </tag>
+ <tag id='15' name='Category' type='string' count='3' writable='true'>
+  <desc lang='en'>Category</desc>
+ </tag>
+ <tag id='20' name='SupplementalCategories' type='string' count='32' writable='true'>
+  <desc lang='en'>Supplemental Categories</desc>
+ </tag>
+ <tag id='22' name='FixtureIdentifier' type='string' count='32' writable='true'>
+  <desc lang='en'>Fixture Identifier</desc>
+ </tag>
+ <tag id='25' name='Keywords' type='string' count='64' writable='true'>
+  <desc lang='en'>Keywords</desc>
+ </tag>
+ <tag id='26' name='ContentLocationCode' type='string' count='3' writable='true' g2='Location'>
+  <desc lang='en'>Content Location Code</desc>
+ </tag>
+ <tag id='27' name='ContentLocationName' type='string' count='64' writable='true' g2='Location'>
+  <desc lang='en'>Content Location Name</desc>
+ </tag>
+ <tag id='30' name='ReleaseDate' type='digits' count='8' writable='true' g2='Time'>
+  <desc lang='en'>Release Date</desc>
+ </tag>
+ <tag id='35' name='ReleaseTime' type='string' count='11' writable='true' g2='Time'>
+  <desc lang='en'>Release Time</desc>
+ </tag>
+ <tag id='37' name='ExpirationDate' type='digits' count='8' writable='true' g2='Time'>
+  <desc lang='en'>Expiration Date</desc>
+ </tag>
+ <tag id='38' name='ExpirationTime' type='string' count='11' writable='true' g2='Time'>
+  <desc lang='en'>Expiration Time</desc>
+ </tag>
+ <tag id='40' name='SpecialInstructions' type='string' count='256' writable='true'>
+  <desc lang='en'>Special Instructions</desc>
+ </tag>
+ <tag id='42' name='ActionAdvised' type='digits' count='2' writable='true'>
+  <desc lang='en'>Action Advised</desc>
+  <values>
+   <key id='01'>
+    <val lang='en'>Object Kill</val>
+   </key>
+   <key id='02'>
+    <val lang='en'>Object Replace</val>
+   </key>
+   <key id='03'>
+    <val lang='en'>Object Append</val>
+   </key>
+   <key id='04'>
+    <val lang='en'>Object Reference</val>
+   </key>
+   <key id=''>
+    <val lang='en'></val>
+   </key>
+  </values>
+ </tag>
+ <tag id='45' name='ReferenceService' type='string' count='10' writable='true'>
+  <desc lang='en'>Reference Service</desc>
+ </tag>
+ <tag id='47' name='ReferenceDate' type='digits' count='8' writable='true' g2='Time'>
+  <desc lang='en'>Reference Date</desc>
+ </tag>
+ <tag id='50' name='ReferenceNumber' type='digits' count='8' writable='true'>
+  <desc lang='en'>Reference Number</desc>
+ </tag>
+ <tag id='55' name='DateCreated' type='digits' count='8' writable='true' g2='Time'>
+  <desc lang='en'>Date Created</desc>
+ </tag>
+ <tag id='60' name='TimeCreated' type='string' count='11' writable='true' g2='Time'>
+  <desc lang='en'>Time Created</desc>
+ </tag>
+ <tag id='62' name='DigitalCreationDate' type='digits' count='8' writable='true' g2='Time'>
+  <desc lang='en'>Digital Creation Date</desc>
+ </tag>
+ <tag id='63' name='DigitalCreationTime' type='string' count='11' writable='true' g2='Time'>
+  <desc lang='en'>Digital Creation Time</desc>
+ </tag>
+ <tag id='65' name='OriginatingProgram' type='string' count='32' writable='true'>
+  <desc lang='en'>Originating Program</desc>
+ </tag>
+ <tag id='70' name='ProgramVersion' type='string' count='10' writable='true'>
+  <desc lang='en'>Program Version</desc>
+ </tag>
+ <tag id='75' name='ObjectCycle' type='string' count='1' writable='true'>
+  <desc lang='en'>Object Cycle</desc>
+  <values>
+   <key id='a'>
+    <val lang='en'>Morning</val>
+   </key>
+   <key id='b'>
+    <val lang='en'>Both Morning and Evening</val>
+   </key>
+   <key id='p'>
+    <val lang='en'>Evening</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='80' name='By-line' type='string' count='32' writable='true' g2='Author'>
+  <desc lang='en'>By-line</desc>
+ </tag>
+ <tag id='85' name='By-lineTitle' type='string' count='32' writable='true' g2='Author'>
+  <desc lang='en'>By-line Title</desc>
+ </tag>
+ <tag id='90' name='City' type='string' count='32' writable='true' g2='Location'>
+  <desc lang='en'>City</desc>
+ </tag>
+ <tag id='92' name='Sub-location' type='string' count='32' writable='true' g2='Location'>
+  <desc lang='en'>Sub-location</desc>
+ </tag>
+ <tag id='95' name='Province-State' type='string' count='32' writable='true' g2='Location'>
+  <desc lang='en'>Province-State</desc>
+ </tag>
+ <tag id='100' name='Country-PrimaryLocationCode' type='string' count='3' writable='true' g2='Location'>
+  <desc lang='en'>Country-Primary Location Code</desc>
+ </tag>
+ <tag id='101' name='Country-PrimaryLocationName' type='string' count='64' writable='true' g2='Location'>
+  <desc lang='en'>Country-Primary Location Name</desc>
+ </tag>
+ <tag id='103' name='OriginalTransmissionReference' type='string' count='32' writable='true'>
+  <desc lang='en'>Original Transmission Reference</desc>
+ </tag>
+ <tag id='105' name='Headline' type='string' count='256' writable='true'>
+  <desc lang='en'>Headline</desc>
+ </tag>
+ <tag id='110' name='Credit' type='string' count='32' writable='true' g2='Author'>
+  <desc lang='en'>Credit</desc>
+ </tag>
+ <tag id='115' name='Source' type='string' count='32' writable='true' g2='Author'>
+  <desc lang='en'>Source</desc>
+ </tag>
+ <tag id='116' name='CopyrightNotice' type='string' count='128' writable='true' g2='Author'>
+  <desc lang='en'>Copyright Notice</desc>
+ </tag>
+ <tag id='118' name='Contact' type='string' count='128' writable='true' g2='Author'>
+  <desc lang='en'>Contact</desc>
+ </tag>
+ <tag id='120' name='Caption-Abstract' type='string' count='2000' writable='true'>
+  <desc lang='en'>Caption-Abstract</desc>
+ </tag>
+ <tag id='121' name='LocalCaption' type='string' count='256' writable='true'>
+  <desc lang='en'>Local Caption</desc>
+ </tag>
+ <tag id='122' name='Writer-Editor' type='string' count='32' writable='true' g2='Author'>
+  <desc lang='en'>Writer-Editor</desc>
+ </tag>
+ <tag id='125' name='RasterizedCaption' type='undef' count='7360' writable='true'>
+  <desc lang='en'>Rasterized Caption</desc>
+ </tag>
+ <tag id='130' name='ImageType' type='string' count='2' writable='true' g2='Image'>
+  <desc lang='en'>Image Type</desc>
+ </tag>
+ <tag id='131' name='ImageOrientation' type='string' count='1' writable='true' g2='Image'>
+  <desc lang='en'>Image Orientation</desc>
+  <values>
+   <key id='L'>
+    <val lang='en'>Landscape</val>
+   </key>
+   <key id='P'>
+    <val lang='en'>Portrait</val>
+   </key>
+   <key id='S'>
+    <val lang='en'>Square</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='135' name='LanguageIdentifier' type='string' count='3' writable='true'>
+  <desc lang='en'>Language Identifier</desc>
+ </tag>
+ <tag id='150' name='AudioType' type='string' count='2' writable='true'>
+  <desc lang='en'>Audio Type</desc>
+  <values>
+   <key id='0T'>
+    <val lang='en'>Text Only</val>
+   </key>
+   <key id='1A'>
+    <val lang='en'>Mono Actuality</val>
+   </key>
+   <key id='1C'>
+    <val lang='en'>Mono Question and Answer Session</val>
+   </key>
+   <key id='1M'>
+    <val lang='en'>Mono Music</val>
+   </key>
+   <key id='1Q'>
+    <val lang='en'>Mono Response to a Question</val>
+   </key>
+   <key id='1R'>
+    <val lang='en'>Mono Raw Sound</val>
+   </key>
+   <key id='1S'>
+    <val lang='en'>Mono Scener</val>
+   </key>
+   <key id='1V'>
+    <val lang='en'>Mono Voicer</val>
+   </key>
+   <key id='1W'>
+    <val lang='en'>Mono Wrap</val>
+   </key>
+   <key id='2A'>
+    <val lang='en'>Stereo Actuality</val>
+   </key>
+   <key id='2C'>
+    <val lang='en'>Stereo Question and Answer Session</val>
+   </key>
+   <key id='2M'>
+    <val lang='en'>Stereo Music</val>
+   </key>
+   <key id='2Q'>
+    <val lang='en'>Stereo Response to a Question</val>
+   </key>
+   <key id='2R'>
+    <val lang='en'>Stereo Raw Sound</val>
+   </key>
+   <key id='2S'>
+    <val lang='en'>Stereo Scener</val>
+   </key>
+   <key id='2V'>
+    <val lang='en'>Stereo Voicer</val>
+   </key>
+   <key id='2W'>
+    <val lang='en'>Stereo Wrap</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='151' name='AudioSamplingRate' type='digits' count='6' writable='true'>
+  <desc lang='en'>Audio Sampling Rate</desc>
+ </tag>
+ <tag id='152' name='AudioSamplingResolution' type='digits' count='2' writable='true'>
+  <desc lang='en'>Audio Sampling Resolution</desc>
+ </tag>
+ <tag id='153' name='AudioDuration' type='digits' count='6' writable='true'>
+  <desc lang='en'>Audio Duration</desc>
+ </tag>
+ <tag id='154' name='AudioOutcue' type='string' count='64' writable='true'>
+  <desc lang='en'>Audio Outcue</desc>
+ </tag>
+ <tag id='184' name='JobID' type='string' count='64' writable='true'>
+  <desc lang='en'>Job ID</desc>
+ </tag>
+ <tag id='185' name='MasterDocumentID' type='string' count='256' writable='true'>
+  <desc lang='en'>Master Document ID</desc>
+ </tag>
+ <tag id='186' name='ShortDocumentID' type='string' count='64' writable='true'>
+  <desc lang='en'>Short Document ID</desc>
+ </tag>
+ <tag id='187' name='UniqueDocumentID' type='string' count='128' writable='true'>
+  <desc lang='en'>Unique Document ID</desc>
+ </tag>
+ <tag id='188' name='OwnerID' type='string' count='128' writable='true'>
+  <desc lang='en'>Owner ID</desc>
+ </tag>
+ <tag id='200' name='ObjectPreviewFileFormat' type='int16u' writable='true' g2='Image'>
+  <desc lang='en'>Object Preview File Format</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>No ObjectData</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>IPTC-NAA Digital Newsphoto Parameter Record</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>IPTC7901 Recommended Message Format</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Tagged Image File Format (Adobe/Aldus Image data)</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Illustrator (Adobe Graphics data)</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>AppleSingle (Apple Computer Inc)</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>NAA 89-3 (ANPA 1312)</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>MacBinary II</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>IPTC Unstructured Character Oriented File Format (UCOFF)</val>
+   </key>
+   <key id='9'>
+    <val lang='en'>United Press International ANPA 1312 variant</val>
+   </key>
+   <key id='10'>
+    <val lang='en'>United Press International Down-Load Message</val>
+   </key>
+   <key id='11'>
+    <val lang='en'>JPEG File Interchange (JFIF)</val>
+   </key>
+   <key id='12'>
+    <val lang='en'>Photo-CD Image-Pac (Eastman Kodak)</val>
+   </key>
+   <key id='13'>
+    <val lang='en'>Bit Mapped Graphics File [.BMP] (Microsoft)</val>
+   </key>
+   <key id='14'>
+    <val lang='en'>Digital Audio File [.WAV] (Microsoft &amp; Creative Labs)</val>
+   </key>
+   <key id='15'>
+    <val lang='en'>Audio plus Moving Video [.AVI] (Microsoft)</val>
+   </key>
+   <key id='16'>
+    <val lang='en'>PC DOS/Windows Executable Files [.COM][.EXE]</val>
+   </key>
+   <key id='17'>
+    <val lang='en'>Compressed Binary File [.ZIP] (PKWare Inc)</val>
+   </key>
+   <key id='18'>
+    <val lang='en'>Audio Interchange File Format AIFF (Apple Computer Inc)</val>
+   </key>
+   <key id='19'>
+    <val lang='en'>RIFF Wave (Microsoft Corporation)</val>
+   </key>
+   <key id='20'>
+    <val lang='en'>Freehand (Macromedia/Aldus)</val>
+   </key>
+   <key id='21'>
+    <val lang='en'>Hypertext Markup Language [.HTML] (The Internet Society)</val>
+   </key>
+   <key id='22'>
+    <val lang='en'>MPEG 2 Audio Layer 2 (Musicom), ISO/IEC</val>
+   </key>
+   <key id='23'>
+    <val lang='en'>MPEG 2 Audio Layer 3, ISO/IEC</val>
+   </key>
+   <key id='24'>
+    <val lang='en'>Portable Document File [.PDF] Adobe</val>
+   </key>
+   <key id='25'>
+    <val lang='en'>News Industry Text Format (NITF)</val>
+   </key>
+   <key id='26'>
+    <val lang='en'>Tape Archive [.TAR]</val>
+   </key>
+   <key id='27'>
+    <val lang='en'>Tidningarnas Telegrambyra NITF version (TTNITF DTD)</val>
+   </key>
+   <key id='28'>
+    <val lang='en'>Ritzaus Bureau NITF version (RBNITF DTD)</val>
+   </key>
+   <key id='29'>
+    <val lang='en'>Corel Draw [.CDR]</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='201' name='ObjectPreviewFileVersion' type='int16u' writable='true' g2='Image'>
+  <desc lang='en'>Object Preview File Version</desc>
+ </tag>
+ <tag id='202' name='ObjectPreviewData' type='undef' count='256000' writable='true' g2='Image'>
+  <desc lang='en'>Object Preview Data</desc>
+ </tag>
+ <tag id='221' name='Prefs' type='string' count='64' writable='true' g2='Image'>
+  <desc lang='en'>Prefs</desc>
+ </tag>
+ <tag id='225' name='ClassifyState' type='string' count='64' writable='true'>
+  <desc lang='en'>Classify State</desc>
+ </tag>
+ <tag id='228' name='SimilarityIndex' type='string' count='32' writable='true'>
+  <desc lang='en'>Similarity Index</desc>
+ </tag>
+ <tag id='230' name='DocumentNotes' type='string' count='1024' writable='true'>
+  <desc lang='en'>Document Notes</desc>
+ </tag>
+ <tag id='231' name='DocumentHistory' type='string' count='256' writable='true'>
+  <desc lang='en'>Document History</desc>
+ </tag>
+ <tag id='232' name='ExifCameraInfo' type='string' count='4096' writable='true'>
+  <desc lang='en'>Exif Camera Info</desc>
+ </tag>
+ <tag id='255' name='CatalogSets' type='string' count='256' writable='true'>
+  <desc lang='en'>Catalog Sets</desc>
+ </tag>
+</table>
+
+<table name='IPTC::EnvelopeRecord' g0='IPTC' g1='IPTC' g2='Other'>
+ <desc lang='en'>IPTC EnvelopeRecord</desc>
+ <tag id='0' name='EnvelopeRecordVersion' type='int16u' writable='true'>
+  <desc lang='en'>Envelope Record Version</desc>
+ </tag>
+ <tag id='5' name='Destination' type='string' count='1024' writable='true' g2='Location'>
+  <desc lang='en'>Destination</desc>
+ </tag>
+ <tag id='20' name='FileFormat' type='int16u' writable='true' g2='Image'>
+  <desc lang='en'>File Format</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>No ObjectData</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>IPTC-NAA Digital Newsphoto Parameter Record</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>IPTC7901 Recommended Message Format</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Tagged Image File Format (Adobe/Aldus Image data)</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Illustrator (Adobe Graphics data)</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>AppleSingle (Apple Computer Inc)</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>NAA 89-3 (ANPA 1312)</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>MacBinary II</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>IPTC Unstructured Character Oriented File Format (UCOFF)</val>
+   </key>
+   <key id='9'>
+    <val lang='en'>United Press International ANPA 1312 variant</val>
+   </key>
+   <key id='10'>
+    <val lang='en'>United Press International Down-Load Message</val>
+   </key>
+   <key id='11'>
+    <val lang='en'>JPEG File Interchange (JFIF)</val>
+   </key>
+   <key id='12'>
+    <val lang='en'>Photo-CD Image-Pac (Eastman Kodak)</val>
+   </key>
+   <key id='13'>
+    <val lang='en'>Bit Mapped Graphics File [.BMP] (Microsoft)</val>
+   </key>
+   <key id='14'>
+    <val lang='en'>Digital Audio File [.WAV] (Microsoft &amp; Creative Labs)</val>
+   </key>
+   <key id='15'>
+    <val lang='en'>Audio plus Moving Video [.AVI] (Microsoft)</val>
+   </key>
+   <key id='16'>
+    <val lang='en'>PC DOS/Windows Executable Files [.COM][.EXE]</val>
+   </key>
+   <key id='17'>
+    <val lang='en'>Compressed Binary File [.ZIP] (PKWare Inc)</val>
+   </key>
+   <key id='18'>
+    <val lang='en'>Audio Interchange File Format AIFF (Apple Computer Inc)</val>
+   </key>
+   <key id='19'>
+    <val lang='en'>RIFF Wave (Microsoft Corporation)</val>
+   </key>
+   <key id='20'>
+    <val lang='en'>Freehand (Macromedia/Aldus)</val>
+   </key>
+   <key id='21'>
+    <val lang='en'>Hypertext Markup Language [.HTML] (The Internet Society)</val>
+   </key>
+   <key id='22'>
+    <val lang='en'>MPEG 2 Audio Layer 2 (Musicom), ISO/IEC</val>
+   </key>
+   <key id='23'>
+    <val lang='en'>MPEG 2 Audio Layer 3, ISO/IEC</val>
+   </key>
+   <key id='24'>
+    <val lang='en'>Portable Document File [.PDF] Adobe</val>
+   </key>
+   <key id='25'>
+    <val lang='en'>News Industry Text Format (NITF)</val>
+   </key>
+   <key id='26'>
+    <val lang='en'>Tape Archive [.TAR]</val>
+   </key>
+   <key id='27'>
+    <val lang='en'>Tidningarnas Telegrambyra NITF version (TTNITF DTD)</val>
+   </key>
+   <key id='28'>
+    <val lang='en'>Ritzaus Bureau NITF version (RBNITF DTD)</val>
+   </key>
+   <key id='29'>
+    <val lang='en'>Corel Draw [.CDR]</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='22' name='FileVersion' type='int16u' writable='true' g2='Image'>
+  <desc lang='en'>File Version</desc>
+ </tag>
+ <tag id='30' name='ServiceIdentifier' type='string' count='10' writable='true'>
+  <desc lang='en'>Service Identifier</desc>
+ </tag>
+ <tag id='40' name='EnvelopeNumber' type='digits' count='8' writable='true'>
+  <desc lang='en'>Envelope Number</desc>
+ </tag>
+ <tag id='50' name='ProductID' type='string' count='32' writable='true'>
+  <desc lang='en'>Product ID</desc>
+ </tag>
+ <tag id='60' name='EnvelopePriority' type='digits' count='1' writable='true'>
+  <desc lang='en'>Envelope Priority</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>0 (reserved)</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>1 (most urgent)</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>2</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>3</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>4</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>5 (normal urgency)</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>6</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>7</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>8 (least urgent)</val>
+   </key>
+   <key id='9'>
+    <val lang='en'>9 (user-defined priority)</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='70' name='DateSent' type='digits' count='8' writable='true' g2='Time'>
+  <desc lang='en'>Date Sent</desc>
+ </tag>
+ <tag id='80' name='TimeSent' type='string' count='11' writable='true' g2='Time'>
+  <desc lang='en'>Time Sent</desc>
+ </tag>
+ <tag id='90' name='CodedCharacterSet' type='string' count='32' writable='true'>
+  <desc lang='en'>Coded Character Set</desc>
+ </tag>
+ <tag id='100' name='UniqueObjectName' type='string' count='80' writable='true'>
+  <desc lang='en'>Unique Object Name</desc>
+ </tag>
+ <tag id='120' name='ARMIdentifier' type='int16u' writable='true'>
+  <desc lang='en'>ARM Identifier</desc>
+ </tag>
+ <tag id='122' name='ARMVersion' type='int16u' writable='true'>
+  <desc lang='en'>ARM Version</desc>
+ </tag>
+</table>
+
+<table name='IPTC::NewsPhoto' g0='IPTC' g1='IPTC' g2='Image'>
+ <desc lang='en'>IPTC NewsPhoto</desc>
+ <tag id='0' name='NewsPhotoVersion' type='int16u' writable='true'>
+  <desc lang='en'>News Photo Version</desc>
+ </tag>
+ <tag id='10' name='IPTCPictureNumber' type='string' count='16' writable='true'>
+  <desc lang='en'>IPTC Picture Number</desc>
+ </tag>
+ <tag id='20' name='IPTCImageWidth' type='int16u' writable='true'>
+  <desc lang='en'>IPTC Image Width</desc>
+ </tag>
+ <tag id='30' name='IPTCImageHeight' type='int16u' writable='true'>
+  <desc lang='en'>IPTC Image Height</desc>
+ </tag>
+ <tag id='40' name='IPTCPixelWidth' type='int16u' writable='true'>
+  <desc lang='en'>IPTC Pixel Width</desc>
+ </tag>
+ <tag id='50' name='IPTCPixelHeight' type='int16u' writable='true'>
+  <desc lang='en'>IPTC Pixel Height</desc>
+ </tag>
+ <tag id='55' name='SupplementalType' type='int8u' writable='true'>
+  <desc lang='en'>Supplemental Type</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Main Image</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Reduced Resolution Image</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>Logo</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Rasterized Caption</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='60' name='ColorRepresentation' type='int16u' writable='true'>
+  <desc lang='en'>Color Representation</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>No Image, Single Frame</val>
+   </key>
+   <key id='256'>
+    <val lang='en'>Monochrome, Single Frame</val>
+   </key>
+   <key id='768'>
+    <val lang='en'>3 Components, Single Frame</val>
+   </key>
+   <key id='769'>
+    <val lang='en'>3 Components, Frame Sequential in Multiple Objects</val>
+   </key>
+   <key id='770'>
+    <val lang='en'>3 Components, Frame Sequential in One Object</val>
+   </key>
+   <key id='771'>
+    <val lang='en'>3 Components, Line Sequential</val>
+   </key>
+   <key id='772'>
+    <val lang='en'>3 Components, Pixel Sequential</val>
+   </key>
+   <key id='773'>
+    <val lang='en'>3 Components, Special Interleaving</val>
+   </key>
+   <key id='1024'>
+    <val lang='en'>4 Components, Single Frame</val>
+   </key>
+   <key id='1025'>
+    <val lang='en'>4 Components, Frame Sequential in Multiple Objects</val>
+   </key>
+   <key id='1026'>
+    <val lang='en'>4 Components, Frame Sequential in One Object</val>
+   </key>
+   <key id='1027'>
+    <val lang='en'>4 Components, Line Sequential</val>
+   </key>
+   <key id='1028'>
+    <val lang='en'>4 Components, Pixel Sequential</val>
+   </key>
+   <key id='1029'>
+    <val lang='en'>4 Components, Special Interleaving</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='64' name='InterchangeColorSpace' type='int8u' writable='true'>
+  <desc lang='en'>Interchange Color Space</desc>
+  <values>
+   <key id='1'>
+    <val lang='en'>X,Y,Z CIE</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>RGB SMPTE</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Y,U,V (K) (D65)</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>RGB Device Dependent</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>CMY (K) Device Dependent</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>Lab (K) CIE</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>YCbCr</val>
+   </key>
+   <key id='8'>
+    <val lang='en'>sRGB</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='65' name='ColorSequence' type='int8u' writable='true'>
+  <desc lang='en'>Color Sequence</desc>
+ </tag>
+ <tag id='66' name='ICC_Profile' type='?' writable='true'>
+  <desc lang='en'>ICC Profile</desc>
+ </tag>
+ <tag id='70' name='ColorCalibrationMatrix' type='?' writable='true'>
+  <desc lang='en'>Color Calibration Matrix</desc>
+ </tag>
+ <tag id='80' name='LookupTable' type='?' writable='true'>
+  <desc lang='en'>Lookup Table</desc>
+ </tag>
+ <tag id='84' name='NumIndexEntries' type='int16u' writable='true'>
+  <desc lang='en'>Num Index Entries</desc>
+ </tag>
+ <tag id='85' name='ColorPalette' type='?' writable='true'>
+  <desc lang='en'>Color Palette</desc>
+ </tag>
+ <tag id='86' name='IPTCBitsPerSample' type='int8u' writable='true'>
+  <desc lang='en'>IPTC Bits Per Sample</desc>
+ </tag>
+ <tag id='90' name='SampleStructure' type='int8u' writable='true'>
+  <desc lang='en'>Sample Structure</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>OrthogonalConstangSampling</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Orthogonal4-2-2Sampling</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>CompressionDependent</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='100' name='ScanningDirection' type='int8u' writable='true'>
+  <desc lang='en'>Scanning Direction</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>L-R, Top-Bottom</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>R-L, Top-Bottom</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>L-R, Bottom-Top</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>R-L, Bottom-Top</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>Top-Bottom, L-R</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>Bottom-Top, L-R</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>Top-Bottom, R-L</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>Bottom-Top, R-L</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='102' name='IPTCImageRotation' type='int8u' writable='true'>
+  <desc lang='en'>IPTC Image Rotation</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>0</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>90</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>180</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>270</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='110' name='DataCompressionMethod' type='int32u' writable='true'>
+  <desc lang='en'>Data Compression Method</desc>
+ </tag>
+ <tag id='120' name='QuantizationMethod' type='int8u' writable='true'>
+  <desc lang='en'>Quantization Method</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Linear Reflectance/Transmittance</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Linear Density</val>
+   </key>
+   <key id='2'>
+    <val lang='en'>IPTC Ref B</val>
+   </key>
+   <key id='3'>
+    <val lang='en'>Linear Dot Percent</val>
+   </key>
+   <key id='4'>
+    <val lang='en'>AP Domestic Analogue</val>
+   </key>
+   <key id='5'>
+    <val lang='en'>Compression Method Specific</val>
+   </key>
+   <key id='6'>
+    <val lang='en'>Color Space Specific</val>
+   </key>
+   <key id='7'>
+    <val lang='en'>Gamma Compensated</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='125' name='EndPoints' type='?' writable='true'>
+  <desc lang='en'>End Points</desc>
+ </tag>
+ <tag id='130' name='ExcursionTolerance' type='int8u' writable='true'>
+  <desc lang='en'>Excursion Tolerance</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Not Allowed</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Allowed</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='135' name='BitsPerComponent' type='int8u' writable='true'>
+  <desc lang='en'>Bits Per Component</desc>
+ </tag>
+ <tag id='140' name='MaximumDensityRange' type='int16u' writable='true'>
+  <desc lang='en'>Maximum Density Range</desc>
+ </tag>
+ <tag id='145' name='GammaCompensatedValue' type='int16u' writable='true'>
+  <desc lang='en'>Gamma Compensated Value</desc>
+ </tag>
+</table>
+
+<table name='IPTC::ObjectData' g0='IPTC' g1='IPTC' g2='Other'>
+ <desc lang='en'>IPTC ObjectData</desc>
+ <tag id='10' name='SubFile' type='?' writable='false'>
+  <desc lang='en'>Sub File</desc>
+ </tag>
+</table>
+
+<table name='IPTC::PostObjectData' g0='IPTC' g1='IPTC' g2='Other'>
+ <desc lang='en'>IPTC PostObjectData</desc>
+ <tag id='10' name='ConfirmedObjectSize' type='int32u' writable='false'>
+  <desc lang='en'>Confirmed Object Size</desc>
+ </tag>
+</table>
+
+<table name='IPTC::PreObjectData' g0='IPTC' g1='IPTC' g2='Other'>
+ <desc lang='en'>IPTC PreObjectData</desc>
+ <tag id='10' name='SizeMode' type='int8u' writable='false'>
+  <desc lang='en'>Size Mode</desc>
+  <values>
+   <key id='0'>
+    <val lang='en'>Size Not Known</val>
+   </key>
+   <key id='1'>
+    <val lang='en'>Size Known</val>
+   </key>
+  </values>
+ </tag>
+ <tag id='20' name='MaxSubfileSize' type='int32u' writable='false'>
+  <desc lang='en'>Max Subfile Size</desc>
+ </tag>
+ <tag id='90' name='ObjectSizeAnnounced' type='int32u' writable='false'>
+  <desc lang='en'>Object Size Announced</desc>
+ </tag>
+ <tag id='95' name='MaximumObjectSize' type='int32u' writable='false'>
+  <desc lang='en'>Maximum Object Size</desc>
+ </tag>
+</table>
+
+</taginfo>

@@ -28,3 +28,30 @@ Usage of ./chkmd:
 ```
 Example
 `chkmd -c myconfig.yaml -p 4 -d /path/to/media/assets`
+
+
+Hacking
+-------
+
+```shell
+cd $GOPATH/src/github.com/v-studios
+git clone git@github.com:v-studios/chkmd
+git co <somefeature-branch>
+make develop
+
+...
+hack
+...
+
+make check 
+```
+
+See the Makefile for more targets...
+
+```shell
+make test
+make coverage
+make vet
+make lint
+...
+```
